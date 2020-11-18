@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# PilotLog 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Full Stack capstone for NSS. Currently just setting up the repo in preparation for the chaos. 
 
 ## Available Scripts
 
