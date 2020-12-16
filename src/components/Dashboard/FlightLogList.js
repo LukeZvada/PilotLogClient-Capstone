@@ -3,8 +3,8 @@ import { FlightLogContext } from "./FlightLogProvider"
 import "./FlightLogDashboard.css"
 
 
-export const ShowList = (props) => {
-    const { flights, getFlights } = useContext(ShowContext)
+export const FlightLogList = (props) => {
+    const { flights, getFlights } = useContext(FlightLogContext)
 
     // const currentUserId = parseInt(localStorage.getItem("tourVana_username"))
 
@@ -13,17 +13,56 @@ export const ShowList = (props) => {
     }, [])
 
     return (
-        <>
-            <article className="welcomeMessage">
-                <section key={currentUser.id} className="user">
-                    <div><h1 className="welcomeTitle">Welcome, {currentUser.firstName}</h1></div>
-                </section>
-            </article>
-            
-            <article>
-                <div><h2 className="upcomingShows">Upcoming Shows</h2></div>
-            </article>
-        </>
+        <section className="flightlog-card">
+            <div className="card" style={{width: "18rem"}}>
+                <div className="card-body">
+                    <h5 className="card-title">Card title</h5>
+                    <h6 className="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" className="card-link">View Full Log</a>
+                </div>
+            </div>
+            <div className="card" style={{width: "18rem"}}>
+                <div className="card-body">
+                    <h5 className="card-title">Card title</h5>
+                    <h6 className="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" className="card-link">View Full Log</a>
+                </div>
+            </div>
+            <div className="card" style={{width: "18rem"}}>
+                <div className="card-body">
+                    <h5 className="card-title">Card title</h5>
+                    <h6 className="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" className="card-link">View Full Log</a>
+                </div>
+            </div>
+            <div className="card" style={{width: "18rem"}}>
+                <div className="card-body">
+                    <h5 className="card-title">Card title</h5>
+                    <h6 className="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" className="card-link">View Full Log</a>
+                </div>
+            </div>
+            <div className="card" style={{width: "18rem"}}>
+                <div className="card-body">
+                    <h5 className="card-title">Card title</h5>
+                    <h6 className="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" className="card-link">View Full Log</a>
+                </div>
+            </div>
+            <div className="card" style={{width: "18rem"}}>
+                <div className="card-body">
+                    <h5 className="card-title">Card title</h5>
+                    <h6 className="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" className="card-link">View Full Log</a>
+                </div>
+            </div>
+        </section>
+        
     )
 }
-
