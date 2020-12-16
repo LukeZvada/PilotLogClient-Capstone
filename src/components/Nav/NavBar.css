@@ -1,25 +1,52 @@
-.navbar {
+@media only screen and (min-width: 992px) {
+    .navbar {
+        position: fixed;
+        left: 0;
+        height: 100%;
+        width: 20em;
+        padding: 4em 3em;
+        flex-direction: column;
+        display: flex;
+        /* background: linear-gradient(180deg, rgba(86, 124, 182, 0.65) 3.53%, rgba(27, 25, 66, 0.85) 16.03%, #17163B 100%); */
+
+        /* background:
+        linear-gradient(
+            to bottom,
+            hsl(239.29, 32.71%, 79.02%) 0%,
+            hsl(240.15, 24.2%, 72.29%) 3.7%,
+            hsl(241.08, 19.35%, 65.9%) 6.6%,
+            hsl(241.06, 16.31%, 59.86%) 9.1%,
+            hsl(242.09, 14.32%, 54.21%) 11.2%,
+            hsl(243.12, 13.55%, 48.96%) 13.5%,
+            hsl(243.13, 15.38%, 44.15%) 16%,
+            hsl(244.08, 17.63%, 39.81%) 19.2%,
+            hsl(244.93, 20.35%, 35.95%) 23.3%,
+            hsl(244.67, 23.55%, 32.61%) 28.5%,
+            hsl(245.27, 27.16%, 29.78%) 35.2%,
+            hsl(245.73, 31.03%, 27.44%) 43.6%,
+            hsl(246.07, 35.04%, 25.53%) 54%,
+            hsl(246.31, 39.13%, 23.95%) 66.7%,
+            hsl(246.49, 43.62%, 22.52%) 81.9%,
+            hsl(246, 49.53%, 20.98%) 100%
+        ); */
+    }
+
+    .navbar ul,
+    .navbar .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+}
+
+.navbar ul {
+    padding: 3em;
+}
+
+
+
+.navbarColumn {
     display: block;
-    background:
-    linear-gradient(
-        to bottom,
-        hsl(239.29, 32.71%, 79.02%) 0%,
-        hsl(240.15, 24.2%, 72.29%) 3.7%,
-        hsl(241.08, 19.35%, 65.9%) 6.6%,
-        hsl(241.06, 16.31%, 59.86%) 9.1%,
-        hsl(242.09, 14.32%, 54.21%) 11.2%,
-        hsl(243.12, 13.55%, 48.96%) 13.5%,
-        hsl(243.13, 15.38%, 44.15%) 16%,
-        hsl(244.08, 17.63%, 39.81%) 19.2%,
-        hsl(244.93, 20.35%, 35.95%) 23.3%,
-        hsl(244.67, 23.55%, 32.61%) 28.5%,
-        hsl(245.27, 27.16%, 29.78%) 35.2%,
-        hsl(245.73, 31.03%, 27.44%) 43.6%,
-        hsl(246.07, 35.04%, 25.53%) 54%,
-        hsl(246.31, 39.13%, 23.95%) 66.7%,
-        hsl(246.49, 43.62%, 22.52%) 81.9%,
-        hsl(246, 49.53%, 20.98%) 100%
-    );
     margin: 0;
     position: fixed;
     top: 0;
@@ -70,39 +97,38 @@
     text-decoration: none;
 }
 
-.navbar__link:hover { 
+/* .navbar__link:hover { 
     color:rgba(255, 255, 255, 0.65)
 }
 
 .navbar__link:focus { 
     color:rgba(83, 185, 234, 1)
     
-}
+} */
 
-.circle {
+/* .circle {
     background:rgba(83, 185, 234, 1);
     border-radius: 50%;
     height: 25px;
     width: 25px;
     margin-right: 3px;
     transition: all .6s ease-in-out;
-}
+} */
 
-.circle:hover {
+/* .circle:hover {
     border-radius:0;  
-    /* cursor: pointer; */
-}
+} */
 
-.text {
+/* .text {
     color: #fff;
     opacity: 0;
     text-align: center;
     padding-top: 0px;
     font-size: 13px;
     transition: all .6s ease-in-out;
-}
+} */
 
-.circle:hover .text {
+/* .circle:hover .text {
     padding-top: 30px;
     opacity: 1;
-}
+}  */
