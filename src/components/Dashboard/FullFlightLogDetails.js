@@ -20,7 +20,7 @@ export const FullFlightDetails = (props) => {
             <article className="flightlog-card">
 
                     return <section key={singleFlight.id}>
-                        <div className="card" style={{width: "20rem"}}>
+                        <div className="details_card" style={{width: "20rem"}}>
                             <div className="card-body">
                                 <h5 className="card-title">To: {singleFlight.to} - From: {singleFlight.fromAirport}</h5>
                                 <h6 className="card-subtitle mb-2 text-muted">Date: {singleFlight.date}</h6>
