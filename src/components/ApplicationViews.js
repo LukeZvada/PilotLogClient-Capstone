@@ -3,19 +3,35 @@ import { Route } from "react-router-dom"
 import { FlightLogProvider } from "./Dashboard/FlightLogProvider"
 import { FlightLogList } from "./Dashboard/FlightLogList"
 import { FlightLogStatistics } from "./Dashboard/FlightLogStatistics"
+import { MetarProvider } from "./METARS/MetarsProvider"
+import { MetarList } from "./METARS/MetarsList"
+import { FlightLogHeader } from "./Dashboard/FlightLogHeader"
+import { FlightLogUserProvider } from "./Dashboard/UserProfileProvider"
+
 
 
 export const ApplicationViews = () => {
     return <>
 
         <FlightLogProvider>
-            <Route exact path="/dashboard" render={(props) => {
-                            return <> 
-                                <FlightLogStatistics />
-                                <FlightLogList history={props.history} />
-                            </>
-                        }} />
+            <FlightLogUserProvider>
+                <Route exact path="/dashboard" render={(props) => {
+                    return <> 
+                                    <FlightLogHeader history={props.history}/>
+                                    <FlightLogStatistics />
+                                    <FlightLogList history={props.history} />
+                                </>
+                            }} />
+            </FlightLogUserProvider>
         </FlightLogProvider>
+
+        <MetarProvider>
+            <Route exact path="/metars" render={(props) => {
+                                return <> 
+                                    <MetarList history={props.history} />
+                                </>
+                            }} />
+        </MetarProvider>
 
         <Route path="/logout" render={
             (props) => {

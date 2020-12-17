@@ -1,3 +1,25 @@
+body { 
+    background: radial-gradient(123.22% 129.67% at 100.89% -5.6%, #3C5E91 16.67%, #17153A 63.02%);
+}
+
+.dashboard_Title { 
+    display: flex;
+    position: relative;
+    margin-left: 32rem;
+    padding-top: 50px;
+    color: white;
+    width: 50%;
+}
+
+.dashboard_Quote { 
+    display: flex;
+    position: relative;
+    margin-left: 32rem;
+    padding-top: 10px;
+    color: rgba(151, 151, 151, 1);
+    width: 50%;
+}
+
 .flightlog-card { 
     height: 100vh;
     display: flex;
@@ -31,7 +53,7 @@
     flex-wrap: nowrap;
     justify-content: space-evenly;
     align-content: center;
-    padding-top: 15rem;
+    padding-top: 7rem;
     margin-left: 20rem;
     /* height: 4rem; */
 }
@@ -59,6 +81,3 @@
     color: #FFFFFF;
 }
 
-body { 
-    background: radial-gradient(123.22% 129.67% at 100.89% -5.6%, #3C5E91 16.67%, #17153A 63.02%);
-}
