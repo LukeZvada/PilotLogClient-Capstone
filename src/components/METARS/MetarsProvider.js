@@ -7,9 +7,9 @@ export const MetarProvider = (props) => {
 
 
     const getMetars = () => {
-        return fetch(`https://avwx.rest/api/metar/KJFK`, {
+        return fetch(`https://avwx.rest/api/metar/KCLE`, {
             headers:{
-                // "Authorization": `Token ${vcekIIw9huf9JvlRczTssGjFyvYvo5hKlgJFAKHrexI}`
+                "Authorization": `Token vcekIIw9huf9JvlRczTssGjFyvYvo5hKlgJFAKHrexI`
             }})
             .then(res => res.json())
             .then(setMetars)

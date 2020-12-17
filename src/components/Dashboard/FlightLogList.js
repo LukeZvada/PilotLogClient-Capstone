@@ -1,6 +1,8 @@
 import React, { useContext, useEffect, useState } from "react"
 import { FlightLogContext } from "./FlightLogProvider"
 import "./FlightLogDashboard.css"
+import Button from '@material-ui/core/Button';
+
 
 
 export const FlightLogList = (props) => {
@@ -30,7 +32,11 @@ export const FlightLogList = (props) => {
                                 <p>Total Landings: {flight.landingsDay}</p>
                                 <p>Aircraft: {flight.make_and_model}</p>
                                 <p>Aircraft Ident No.: {flight.aircraftId}</p>
-                                <a href="#" className="card-link">View Full Log</a>
+                                <Button className="flightsDetailsButton" 
+                                        onClick={() => {
+                                                props.history.push(`/flightdetails/${flight.id}`)
+                                        }}>View Full Log
+                                </Button>
                             </div>
                         </div>
                     </section>

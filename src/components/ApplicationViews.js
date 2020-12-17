@@ -8,6 +8,7 @@ import { MetarList } from "./METARS/MetarsList"
 import { FlightLogHeader } from "./Dashboard/FlightLogHeader"
 import { FlightLogUserProvider } from "./Dashboard/UserProfileProvider"
 import { FlightForm } from "./Dashboard/FlightLogForm"
+import { FullFlightDetails } from "./Dashboard/FullFlightLogDetails"
 
 
 
@@ -26,6 +27,11 @@ export const ApplicationViews = () => {
                 <Route exact path="/lognewflight" render={(props) => {
                     return <> 
                                     <FlightForm {...props}/>
+                                </>
+                            }} />
+                <Route exact path="/flightdetails/:flightId(\d+)" render={(props) => {
+                    return <> 
+                                    <FullFlightDetails {...props} />
                                 </>
                             }} />
             </FlightLogUserProvider>
