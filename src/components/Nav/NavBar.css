@@ -118,7 +118,7 @@
     
 } */
 
-/* .circle {
+.circle {
     background:rgba(83, 185, 234, 1);
     border-radius: 50%;
     height: 25px;
@@ -127,20 +127,20 @@
     transition: all .6s ease-in-out;
 } */
 
-/* .circle:hover {
+.circle:hover {
     border-radius:0;  
-} */
+}
 
-/* .text {
+.text {
     color: #fff;
     opacity: 0;
     text-align: center;
     padding-top: 0px;
     font-size: 13px;
     transition: all .6s ease-in-out;
-} */
+}
 
-/* .circle:hover .text {
+.circle:hover .text {
     padding-top: 30px;
     opacity: 1;
-}  */
+} 
