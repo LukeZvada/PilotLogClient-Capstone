@@ -10,7 +10,7 @@ export const Login = () => {
     const password = useRef()
     const invalidDialog = useRef()
     const history = useHistory()
-    let userNumber = localStorage.getItem("rareUser_number")
+    let userNumber = localStorage.getItem("pilotlogUser_number")
 
 
     const handleLogin = (e) => {
@@ -49,7 +49,7 @@ export const Login = () => {
             </dialog>
             <section>
                 <form className="form--login" onSubmit={handleLogin}>
-                    <h1>Rare.</h1>
+                    <h1>Pilot Log</h1>
                     <h2>Please sign in</h2>
                     <fieldset>
                         <label htmlFor="inputEmail"> Email address </label>
