@@ -24,12 +24,12 @@ export const FlightLogList = (props) => {
                     return <section>
                         <div className="card" style={{width: "20rem"}}>
                             <div className="card-body">
-                                <h5 className="card-title">{flight.to} - {flight.fromAirport}</h5>
-                                <h6 className="card-subtitle mb-2 text-muted">{flight.date}</h6>
-                                <p >{flight.total_flight_time}</p>
-                                <p >{flight.landingsDay}</p>
-                                <p >{flight.make_and_model}</p>
-                                <p >{flight.aircraftId}</p>
+                                <h5 className="card-title">To: {flight.to} - From: {flight.fromAirport}</h5>
+                                <h6 className="card-subtitle mb-2 text-muted">Date: {flight.date}</h6>
+                                <p>Total Flight Time: {flight.total_flight_time}</p>
+                                <p>Total Landings: {flight.landingsDay}</p>
+                                <p>Aircraft: {flight.make_and_model}</p>
+                                <p>Aircraft Ident No.: {flight.aircraftId}</p>
                                 <a href="#" className="card-link">View Full Log</a>
                             </div>
                         </div>

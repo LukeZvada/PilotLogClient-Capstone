@@ -29,7 +29,6 @@ body {
     margin-left: 25rem;
     margin-bottom: 150px;
     align-content: center;
-    
 }
 
 .card { 
@@ -39,7 +38,7 @@ body {
     margin-top: 40px;
     margin-right: 190px;
     background: linear-gradient(177.23deg, #2CDBF3 -13.49%, #3A49F9 109.75%);
-
+    border-radius: 14px;
 }
 
 .card-body { 
