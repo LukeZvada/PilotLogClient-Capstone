@@ -20,6 +20,16 @@ body {
     width: 50%;
 }
 
+.flightlog_title {
+    display: flex;
+    position: relative;
+    margin-left: 32rem;
+    padding-top: 120px;
+    margin-bottom: -95px;
+    color: rgba(83, 185, 234, 1);
+    width: 50%;
+}
+
 .flightlog-card { 
     height: 100vh;
     display: flex;
@@ -28,14 +38,14 @@ body {
     flex-wrap: wrap;
     margin-left: 25rem;
     margin-bottom: 150px;
-    align-content: center;
+    /* align-content: center; */
 }
 
 .card { 
     width: 261px;
     height: 277px;
     margin-left: 90px;
-    margin-top: 40px;
+    margin-top: 150px;
     margin-right: 190px;
     background: linear-gradient(177.23deg, #2CDBF3 -13.49%, #3A49F9 109.75%);
     border-radius: 14px;
@@ -43,6 +53,16 @@ body {
 
 .card-body { 
     border-radius: 125px;
+}
+
+.flightstatistics_title {
+    display: flex;
+    position: relative;
+    margin-left: 32rem;
+    padding-top: 50px;
+    margin-bottom: -95px;
+    color: rgba(83, 185, 234, 1);
+    width: 50%;
 }
 
 .statistics-card { 
@@ -80,3 +100,16 @@ body {
     color: #FFFFFF;
 }
 
+.new_flight_form { 
+    width: 30%; 
+    margin-left: 50rem;
+}
+
+.radio {
+    color: white;
+}
+
+.input {
+    background-color: black;
+    color: white;
+}

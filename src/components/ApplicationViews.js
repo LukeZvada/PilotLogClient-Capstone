@@ -7,6 +7,7 @@ import { MetarProvider } from "./METARS/MetarsProvider"
 import { MetarList } from "./METARS/MetarsList"
 import { FlightLogHeader } from "./Dashboard/FlightLogHeader"
 import { FlightLogUserProvider } from "./Dashboard/UserProfileProvider"
+import { FlightForm } from "./Dashboard/FlightLogForm"
 
 
 
@@ -20,6 +21,11 @@ export const ApplicationViews = () => {
                                     <FlightLogHeader history={props.history}/>
                                     <FlightLogStatistics />
                                     <FlightLogList history={props.history} />
+                                </>
+                            }} />
+                <Route exact path="/lognewflight" render={(props) => {
+                    return <> 
+                                    <FlightForm {...props}/>
                                 </>
                             }} />
             </FlightLogUserProvider>

@@ -16,7 +16,7 @@ export const FlightLogList = (props) => {
     return (
         <>
             <article>
-                <div><h2 className="flightstatistics">Flight Statistics</h2></div>
+                <div className="flightlog_title">LOGGED FLIGHTS</div>
             </article>
             <article className="flightlog-card">
             {
