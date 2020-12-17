@@ -4,6 +4,7 @@ export const FlightLogContext = React.createContext()
 
 export const FlightLogProvider = (props) => {
     const [flights, setFlights] = useState([])
+    const [singleFlight, setSingleFlight] = useState([])
     const [userFlights, setUserFlights] = useState([{pilotlog_user: {user: {}}}])
 
 
@@ -14,6 +15,15 @@ export const FlightLogProvider = (props) => {
             }})
             .then(res => res.json())
             .then(setFlights)
+    }
+    
+    const getSingleFlight = (flight) => {
+        return fetch(`http://localhost:8000/newlog/${flight}`, {
+            headers:{
+                "Authorization": `Token ${localStorage.getItem("pilotLogUser_id")}`
+            }})
+            .then(res => res.json())
+            .then(setSingleFlight)
     }
 
     const getUserFlights = (user) => {
@@ -64,7 +74,7 @@ export const FlightLogProvider = (props) => {
     return (
         <FlightLogContext.Provider value={{
             flights, getFlights, getUserFlights, userFlights, addFlight, editFlight,
-            deleteFlight
+            deleteFlight, getSingleFlight, singleFlight
         }}>
             {props.children}
         </FlightLogContext.Provider>
