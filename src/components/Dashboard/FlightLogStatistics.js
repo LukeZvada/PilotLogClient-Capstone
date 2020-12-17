@@ -13,37 +13,42 @@ export const FlightLogStatistics = (props) => {
     }, [])
 
     return (
-        <section className="statistics-card">
-            {/* <div class="card-title">Primary card title</div> */}
-            <div className="statistics-card-body">
-                    <div className="card-body">
-                        <p className="card-text">123.45</p>
-                    </div>
-            </div>
-            {/* <div className="card-title">Primary card title</div> */}
-            <div className="statistics-card-body">
-                    <div className="card-body">
-                        <p className="card-text">123.45</p>
-                    </div>
-            </div>
-            {/* <div className="card-title">Primary card title</div> */}
-            <div className="statistics-card-body">
-                    <div className="card-body">
-                        <p className="card-text">123.45</p>
-                    </div>
-            </div>
-            {/* <div className="card-title">Primary card title</div> */}
-            <div className="statistics-card-body">
-                    <div className="card-body">
-                        <p className="card-text">123.45</p>
-                    </div>
-            </div>
-            {/* <div className="card-title">Primary card title</div> */}
-            <div className="statistics-card-body">
-                    <div className="card-body">
-                        <p className="card-text">123.45</p>
-                    </div>
-            </div>
-        </section>
+        <>
+            <article>
+                <div className="flightstatistics_title">FLIGHT STATISTICS</div>
+            </article>
+            <section className="statistics-card">
+                {/* <div class="card-title">Primary card title</div> */}
+                <div className="statistics-card-body">
+                        <div className="card-body">
+                            <p className="card-text">123.45</p>
+                        </div>
+                </div>
+                {/* <div className="card-title">Primary card title</div> */}
+                <div className="statistics-card-body">
+                        <div className="card-body">
+                            <p className="card-text">123.45</p>
+                        </div>
+                </div>
+                {/* <div className="card-title">Primary card title</div> */}
+                <div className="statistics-card-body">
+                        <div className="card-body">
+                            <p className="card-text">123.45</p>
+                        </div>
+                </div>
+                {/* <div className="card-title">Primary card title</div> */}
+                <div className="statistics-card-body">
+                        <div className="card-body">
+                            <p className="card-text">123.45</p>
+                        </div>
+                </div>
+                {/* <div className="card-title">Primary card title</div> */}
+                <div className="statistics-card-body">
+                        <div className="card-body">
+                            <p className="card-text">123.45</p>
+                        </div>
+                </div>
+            </section>
+        </>
     )
 }

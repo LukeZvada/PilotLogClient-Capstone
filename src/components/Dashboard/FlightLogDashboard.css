@@ -45,6 +45,16 @@ body {
     border-radius: 125px;
 }
 
+.flightstatistics_title {
+    display: flex;
+    position: relative;
+    margin-left: 32rem;
+    padding-top: 50px;
+    margin-bottom: -95px;
+    color: rgba(83, 185, 234, 1);
+    width: 50%;
+}
+
 .statistics-card { 
     position: relative;
     display: flex;
