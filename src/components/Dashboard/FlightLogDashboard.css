@@ -100,3 +100,16 @@ body {
     color: #FFFFFF;
 }
 
+.new_flight_form { 
+    width: 30%; 
+    margin-left: 50rem;
+}
+
+.radio {
+    color: white;
+}
+
+.input {
+    background-color: black;
+    color: white;
+}
