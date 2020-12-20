@@ -12,6 +12,8 @@ export const FullFlightDetails = (props) => {
         getSingleFlight(currentFlightId)
     }, [])
 
+
+
     return (
         <>
             <article>
@@ -31,8 +33,10 @@ export const FullFlightDetails = (props) => {
                                 <p>Landings Day: {singleFlight.landingsDay}</p>
                                 <p>Landings Night: {singleFlight.landingsNight}</p>
                                 <p>Number of Instrument Approaches: {singleFlight.number_of_instrument_approaches}</p>
-                                <p>Type and Location: {singleFlight.type_and_location}</p>
-                                <p>Airplane Single or Multi: {singleFlight.airplane_single_multi}</p>
+                                <p>Type and Location: {singleFlight.type_and_location }</p>
+                                {
+                                <p>Airplane Single or Multi: {singleFlight.airplane_single_multi ? 'Single' : 'Multi'}</p>
+                                }
                                 <p>Airplane Single or Multi Hours: {singleFlight.airplane_single_multi_hours}</p>
                                 <p>Instrument Actual: {singleFlight.instrumentActual}</p>
                                 <p>Simulator / Hood: {singleFlight.simulator_hood}</p>
