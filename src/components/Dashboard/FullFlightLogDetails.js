@@ -51,6 +51,14 @@ export const FullFlightDetails = (props) => {
                                 <p>Flight Training Given: {singleFlight.flight_training_given}</p>
                                 <p>Total Flight Time: {singleFlight.total_flight_time}</p>
                             </div>
+                            <div className="buttonColumn">
+                                <button className="iconBackgroundStyling" 
+                                    onClick={() => {
+                                        props.history.push(`/newlog/edit/${singleFlight.id}`)
+                                    }}>
+                                    Edit Flight
+                                </button>
+                            </div>
                         </div>
                     </section>
             </article>

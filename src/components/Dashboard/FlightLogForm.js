@@ -11,10 +11,9 @@ export const FlightForm = (props) => {
     const [flight, setFlight] = useState({})
     const [show, setShow] = useState(false);
 
-    const editMode = props.match.params.hasOwnProperty("lognewflight")
+    const editMode = props.match.params.hasOwnProperty("flightId")
 
     const handleControlledInputChange = (event) => {
-
         const newFlight = Object.assign({}, flight)
         newFlight[event.target.name] = event.target.value
         setFlight(newFlight)
@@ -23,7 +22,7 @@ export const FlightForm = (props) => {
 
     const getFlightInEditMode = () => {
         if (editMode) {
-            const flightId = parseInt(props.match.params.newlogId)
+            const flightId = parseInt(props.match.params.flightId)
             const selectedFlight = flights.find(f => f.id === flightId) || {}
             setFlight(selectedFlight)
         }
