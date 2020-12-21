@@ -2,15 +2,18 @@ import React, { useContext, useEffect, useState, useRef } from "react"
 import { FlightLogContext } from "./FlightLogProvider"
 import "./FlightLogDashboard.css"
 import Button from '@material-ui/core/Button';
+import Modal from 'react-bootstrap/Modal'
+
+
 
 export const FlightForm = (props) => {
     const { addFlight, getFlights, flights, editFlight } = useContext(FlightLogContext)
     const [flight, setFlight] = useState({})
+    const [show, setShow] = useState(false);
 
-    const editMode = props.match.params.hasOwnProperty("lognewflight")
+    const editMode = props.match.params.hasOwnProperty("flightId")
 
     const handleControlledInputChange = (event) => {
-
         const newFlight = Object.assign({}, flight)
         newFlight[event.target.name] = event.target.value
         setFlight(newFlight)
@@ -19,7 +22,7 @@ export const FlightForm = (props) => {
 
     const getFlightInEditMode = () => {
         if (editMode) {
-            const flightId = parseInt(props.match.params.newlogId)
+            const flightId = parseInt(props.match.params.flightId)
             const selectedFlight = flights.find(f => f.id === flightId) || {}
             setFlight(selectedFlight)
         }
@@ -96,6 +99,9 @@ export const FlightForm = (props) => {
             }
     }
 
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
     return (
         <form className="new_flight_form">
             
@@ -139,6 +145,30 @@ export const FlightForm = (props) => {
                     />
                 </div>
             </fieldset>
+            <section>
+                <Button variant="primary" onClick={handleShow}>
+                    Add InBetween Stop
+                </Button>
+
+                <Modal show={show} onHide={handleClose}>
+                    <Modal.Header closeButton>
+                    <Modal.Title>Add InBewteen Stop</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body><input type="text" name="inbetween" required className="form-control"
+                        placeholder="InBetween Stop"
+                        defaultValue={flight.InBetween}
+                        onChange={handleControlledInputChange}
+                    /></Modal.Body>
+                    <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>
+                        Close
+                    </Button>
+                    <Button variant="contained" onClick={handleClose}>
+                        Save Changes
+                    </Button>
+                    </Modal.Footer>
+                </Modal>
+            </section>
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="to"></label>
@@ -340,6 +370,7 @@ export const FlightForm = (props) => {
                     className="btn btn-primary">
                     Save Flight
                 </Button>
+                <Button className="saveFlightButton" variant="contained" onClick={() => props.history.push(`/dashboard`)}>Cancel</Button>
             </section>
         </form>
     )

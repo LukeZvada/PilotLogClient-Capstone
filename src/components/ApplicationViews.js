@@ -34,6 +34,9 @@ export const ApplicationViews = () => {
                                     <FullFlightDetails {...props} />
                                 </>
                             }} />
+                <Route path="/newlog/edit/:flightId(\d+)" render ={(props) => {
+                        return <FlightForm {...props}/>
+                    }}></Route>
             </FlightLogUserProvider>
         </FlightLogProvider>
 
