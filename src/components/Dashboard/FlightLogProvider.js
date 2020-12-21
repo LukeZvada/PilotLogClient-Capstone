@@ -60,15 +60,15 @@ export const FlightLogProvider = (props) => {
     }
 
     const deleteFlight = (flightId) => {
-        return fetch(`http://localhost:8088/newlog/${flightId}`, {
+        return fetch(`http://localhost:8000/newlog/${flightId}`, {
             method: "DELETE",
             headers: {
                 "Authorization": `Token ${localStorage.getItem("pilotLogUser_id")}`,
             },
         })
-            .then(() => {
-                getUserFlights(localStorage.getItem("pilotLogUser_Id"))
-            })
+            // .then(() => {
+            //     getUserFlights(localStorage.getItem("pilotLogUser_Id"))
+            // })
     }
 
     return (

@@ -18,7 +18,7 @@ export const NavBar = () => {
                         <a className="nav-link" href="/lognewflight">Log New Flight</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="/metars">Metars</a>
+                        <a className="nav-link" href="/metars">METARS</a>
                     </li>
                     <li className="nav-item">
                         <a className="nav-link" href="/airportinformation">Airport Information</a>

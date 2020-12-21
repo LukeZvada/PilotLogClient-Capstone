@@ -1,10 +1,12 @@
 import React, { useContext, useEffect, useState } from "react"
 import { FlightLogContext } from "./FlightLogProvider"
 import "./FlightLogDashboard.css"
+import Button from '@material-ui/core/Button';
+
 
 
 export const FullFlightDetails = (props) => {
-    const { singleFlight, getSingleFlight } = useContext(FlightLogContext)
+    const { singleFlight, getSingleFlight, deleteFlight } = useContext(FlightLogContext)
 
     const currentFlightId = props.match.params.flightId
 
@@ -52,11 +54,18 @@ export const FullFlightDetails = (props) => {
                                 <p>Total Flight Time: {singleFlight.total_flight_time}</p>
                             </div>
                             <div className="buttonColumn">
-                                <button className="iconBackgroundStyling" 
+                                <button className="edit_flight_button" 
                                     onClick={() => {
                                         props.history.push(`/newlog/edit/${singleFlight.id}`)
                                     }}>
                                     Edit Flight
+                                </button>
+                                <button className="delete_flight_button" variant="contained"
+                                    onClick={
+                                        () => deleteFlight(singleFlight.id)
+                                        .then(props.history.push('/dashboard'))
+                                    }>
+                                    Delete
                                 </button>
                             </div>
                         </div>

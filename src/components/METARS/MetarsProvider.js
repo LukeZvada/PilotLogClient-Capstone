@@ -6,8 +6,8 @@ export const MetarProvider = (props) => {
     const [metars, setMetars] = useState([])
 
 
-    const getMetars = () => {
-        return fetch(`https://avwx.rest/api/metar/KCLE`, {
+    const getMetars = (airport, formatType) => {
+        return fetch(`https://avwx.rest/api/multi/metar/${airport}?options=${formatType}&format=json&onfail=cache`, {
             headers:{
                 "Authorization": `Token vcekIIw9huf9JvlRczTssGjFyvYvo5hKlgJFAKHrexI`
             }})
