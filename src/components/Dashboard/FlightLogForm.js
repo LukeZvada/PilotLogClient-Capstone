@@ -111,8 +111,7 @@ export const FlightForm = (props) => {
                     <input type="date" name="date" required autoFocus className="form-control"
                         placeholder="Date"
                         defaultValue={flight.date}
-                        onChange={handleControlledInputChange} 
-                    />
+                        onChange={handleControlledInputChange}></input>
                 </div>
             </fieldset>
             <fieldset>
@@ -151,7 +150,7 @@ export const FlightForm = (props) => {
                 </Button>
 
                 <Modal show={show} onHide={handleClose}>
-                    <Modal.Header closeButton>
+                    <Modal.Header>
                     <Modal.Title>Add InBewteen Stop</Modal.Title>
                     </Modal.Header>
                     <Modal.Body><input type="text" name="inbetween" required className="form-control"

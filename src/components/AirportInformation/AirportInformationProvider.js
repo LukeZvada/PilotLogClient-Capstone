@@ -1,8 +1,8 @@
 import React, { useState } from "react"
 
-export const MetarContext = React.createContext()
+export const AirportInfoContext = React.createContext()
 
-export const MetarProvider = (props) => {
+export const AirportInfoProvider = (props) => {
     const [airportInfo, setAirportInfo] = useState([])
 
 
@@ -14,4 +14,12 @@ export const MetarProvider = (props) => {
             .then(res => res.json())
             .then(setAirportInfo)
     }
+
+    return (
+        <AirportInfoContext.Provider value={{
+            airportInfo, getAirportInfo
+        }}>
+            {props.children}
+        </AirportInfoContext.Provider>
+    )
 }
