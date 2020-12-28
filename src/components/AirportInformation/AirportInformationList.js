@@ -30,12 +30,11 @@ export const AirportInfoList = (props) => {
                             <div className="airportcard-body">
                                     <h1 className="card-title">{
                                         airportInfo.name}</h1>
-                                    <div>Location: {airportInfo.city}, {airportInfo.state}</div> 
-                                    <div>ICAO: {airportInfo.icao}</div> 
-                                    <div>Elevation: {airportInfo.elevation_ft}ft</div> 
-                                    <div>Airport Type: {airportInfo.type}ft</div> 
-                                    <div>More Info: {airportInfo.wiki}</div>
-                                <h6 className="card-subtitle mb-2 text-muted"></h6>
+                                    <div className="airport_locaiton">Location: {airportInfo.city}, {airportInfo.state}</div> 
+                                    <div className="airport_icao">ICAO: {airportInfo.icao}</div> 
+                                    <div className="airport_elevation">Elevation: {airportInfo.elevation_ft}ft</div> 
+                                    <div className="airport_type">Airport Type: {airportInfo.type}ft</div> 
+                                    <div className="airport_moreInfo">More Info: {airportInfo.wiki}</div>
                             </div>
                         </div>
                     </section>
