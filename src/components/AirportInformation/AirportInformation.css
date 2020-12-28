@@ -29,4 +29,39 @@ div#root {
 
 .metar_button{
     margin-left: 30rem;
+    background: linear-gradient(135deg, #40DDFF 0%, #14BAE3 19.24%, #13B1E6 68.64%, #11AADF 81.77%, #0B98C5 100%);
+    border-radius: 10px;
+    width: 299px;
+    height: 42px;
+    color: rgba(255, 255, 255, 1);
+    font-weight: bold;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.metar_button:hover {
+	background:linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
+    background-color:#0688fa;
+}
+
+.metar_button:after {
+    content: "";
+    background: grey;
+    display: block;
+    position: absolute;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.metar_button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
 }
