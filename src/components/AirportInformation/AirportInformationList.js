@@ -30,11 +30,26 @@ export const AirportInfoList = (props) => {
                             <div className="airportcard-body">
                                     <h1 className="card-title">{
                                         airportInfo.name}</h1>
-                                    <div className="airport_location">Location: {airportInfo.city}, {airportInfo.state}</div> 
-                                    <div className="airport_icao">ICAO: {airportInfo.icao}</div> 
-                                    <div className="airport_elevation">Elevation: {airportInfo.elevation_ft}ft</div> 
-                                    <div className="airport_type">Airport Type: {airportInfo.type}ft</div> 
-                                    <div className="airport_moreInfo">More Info: {airportInfo.wiki}</div>
+                                    <div className="airport_location">
+                                        <span>Location:</span> 
+                                        <span>{airportInfo.city}, {airportInfo.state}</span>
+                                    </div> 
+                                    <div className="airport_icao">
+                                        <span>ICAO:</span> 
+                                        <span>{airportInfo.icao}</span>
+                                    </div> 
+                                    <div className="airport_elevation">
+                                        <span>Elevation:</span> 
+                                        <span>{airportInfo.elevation_ft}ft</span>
+                                    </div> 
+                                    <div className="airport_type">
+                                        <span>Airport Type:</span> 
+                                        <span>{airportInfo.type}</span>
+                                    </div> 
+                                    <div className="airport_moreInfo">
+                                        <span>More Info:</span> 
+                                        <span>{airportInfo.wiki}</span>
+                                    </div>
                             </div>
                         </div>
                     </section>
