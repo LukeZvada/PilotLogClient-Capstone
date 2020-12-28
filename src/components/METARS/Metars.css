@@ -7,17 +7,20 @@ div#root {
 }
 
 .metars_card { 
+    display: flex;
+    justify-content: center;
     min-width: 50rem;
     height: 20rem;
-    margin-left: 40rem;
-    padding-top: 150px;
-    margin-right: 290px;
+    margin-left: 60rem;
+    padding-top: 100px;
+    /* margin-right: 290px; */
     background: linear-gradient(177.23deg, #2CDBF3 -13.49%, #3A49F9 109.75%);
     border-radius: 14px;
+    color: white;
 }
 
 .metar_container { 
-    padding-top: 20rem;
+    padding-top: 7rem;
 }
 
 .airport_search {

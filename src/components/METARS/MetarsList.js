@@ -39,7 +39,7 @@ export const MetarList = (props) => {
             <button className="metar_button" 
                     onClick={() => 
                         getMetars(airport, formatType).then(setQuery(airport)) 
-                        // Saving in the setQuery so when the user types in new ICAO code the previous value is saved. Holding the airport so we can query the dynamic keyname that is returned. 
+                        // Saving in the setQuery so when the user types in new ICAO code the previous value is saved. Holding the airport so I can query the dynamic keyname that is returned. 
                     }>Get Metar Data</button>
 
             {
@@ -50,7 +50,6 @@ export const MetarList = (props) => {
                         <div className="card-body">
                                 <h5 className="card-title">{
                                     formatType == "speech" ? metars[query].speech : metars[query].raw}</h5>
-                            <h6 className="card-subtitle mb-2 text-muted"></h6>
                         </div>
                     </div>
                 </section>
