@@ -7,16 +7,16 @@ div#root {
 }
 
 .airport_card { 
-    min-width: 50rem;
-    margin-left: 40rem;
+    display: flex;
+    min-width: 70rem;
+    margin-left: 26rem;
     padding-top: 40px;
     margin-right: 290px;
     background: linear-gradient(177.23deg, #2CDBF3 -13.49%, #3A49F9 109.75%);
     border-radius: 14px;
     color: white;
     position: absolute;
-    width: 870px;
-    height: 288px;
+    height: 325px;
     left: 440px;
     opacity: 0.85;
 }
@@ -81,37 +81,37 @@ div#root {
 .airport_location {
     display: flex;
     margin-bottom: 10px;
-    margin-left: 10px;
+    margin-left: 20px;
     font-size: 20px;
 
 }
 
 .airport_icao {
     margin-bottom: 10px;
-    margin-left: 10px;
+    margin-left: 20px;
     font-size: 20px;
 
 }
 .airport_location {
     margin-bottom: 10px;
-    margin-left: 10px;
+    margin-left: 20px;
     font-size: 20px;
 
 }
 .airport_elevation {
     margin-bottom: 10px;
-    margin-left: 10px;
+    margin-left: 20px;
     font-size: 20px;
 
 }
 .airport_type {
     margin-bottom: 10px;
-    margin-left: 10px;
+    margin-left: 20px;
     font-size: 20px;
 
 }
 .airport_moreInfo {
     margin-bottom: 10px;
-    margin-left: 10px;
+    margin-left: 20px;
     font-size: 20px;
 }
