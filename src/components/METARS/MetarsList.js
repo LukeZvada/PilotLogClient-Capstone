@@ -23,10 +23,11 @@ export const MetarList = (props) => {
                 </div>
                 <fieldset>
                     <div className="form-group radio">
-                        <div>
-                            <input type="radio" value="info" name="formatType" 
+                        <div>Format: </div>
+                        <div >
+                            <input className = "metar_radio_1" type="radio" value="info" name="formatType" 
                                 onChange={handleControlledInputChange}/> Raw
-                            <input type="radio" value="speech" name="formatType"
+                            <input className = "metar_radio_2" type="radio" value="speech" name="formatType"
                                 onChange={handleControlledInputChange} /> Decode
                         </div>
                     </div>

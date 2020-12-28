@@ -29,3 +29,17 @@ div#root {
 .metar_button{
     margin-left: 30rem;
 }
+
+.metar_radio_1 { 
+    margin-right: 10px;
+    margin-left: 20px;
+}
+.metar_radio_2 { 
+    margin-right: 10px;
+    margin-left: 40px;
+}
+
+.radio { 
+    display: flex;
+    /* justify-content: center; */
+}
