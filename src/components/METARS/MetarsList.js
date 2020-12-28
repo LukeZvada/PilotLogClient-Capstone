@@ -18,7 +18,8 @@ export const MetarList = (props) => {
         <>
             <article className="airport_search">
                 <div class="active-cyan-3 active-cyan-4 mb-4">
-                    <input onChange={event => setAirport(event.target.value)} class="form-control" type="text" placeholder="Search ICAO" aria-label="Search"></input>
+                    <div className="search_title">Search ICAO: </div>
+                    <input onChange={event => setAirport(event.target.value)} class="form-control" type="text" placeholder="e.g. KBNA" aria-label="Search"></input>
                 </div>
                 <fieldset>
                     <div className="form-group radio">
