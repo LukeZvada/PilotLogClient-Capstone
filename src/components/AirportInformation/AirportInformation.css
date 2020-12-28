@@ -10,10 +10,11 @@ div#root {
     min-width: 50rem;
     height: 20rem;
     margin-left: 40rem;
-    padding-top: 80px;
+    padding-top: 40px;
     margin-right: 290px;
     background: linear-gradient(177.23deg, #2CDBF3 -13.49%, #3A49F9 109.75%);
     border-radius: 14px;
+    color: white;
 }
 
 .airportInfo_container { 
@@ -64,4 +65,11 @@ div#root {
     margin: 0;
     opacity: 1;
     transition: 0s
+}
+
+.card-title { 
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 30px;
 }
