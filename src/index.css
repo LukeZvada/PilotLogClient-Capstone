@@ -16,3 +16,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+input.form-control {
+  background-color: black;
+  color: white;
+  border-radius: 25px;
+  border-color: #3C5E91;
+}
+

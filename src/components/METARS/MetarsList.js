@@ -54,7 +54,6 @@ export const MetarList = (props) => {
                 </section>
                 : null
             }
-            {/* end the if statement here */}
         </>
     )
 }

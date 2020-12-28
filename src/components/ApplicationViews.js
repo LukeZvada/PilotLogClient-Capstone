@@ -9,6 +9,8 @@ import { FlightLogHeader } from "./Dashboard/FlightLogHeader"
 import { FlightLogUserProvider } from "./Dashboard/UserProfileProvider"
 import { FlightForm } from "./Dashboard/FlightLogForm"
 import { FullFlightDetails } from "./Dashboard/FullFlightLogDetails"
+import { AirportInfoList } from "./AirportInformation/AirportInformationList"
+import { AirportInfoProvider } from "./AirportInformation/AirportInformationProvider"
 
 
 
@@ -47,6 +49,13 @@ export const ApplicationViews = () => {
                                 </>
                             }} />
         </MetarProvider>
+        <AirportInfoProvider>
+            <Route exact path="/airportinformation" render={(props) => {
+                                return <> 
+                                    <AirportInfoList history={props.history} />
+                                </>
+                            }} />
+        </AirportInfoProvider>
 
         <Route path="/logout" render={
             (props) => {

@@ -1,0 +1,126 @@
+body { 
+    background: radial-gradient(123.22% 129.67% at 100.89% -5.6%, #3C5E91 16.67%, #17153A 63.02%);
+}
+
+div#root {
+    min-height: 100vh;
+}
+
+.airport_card { 
+    display: flex;
+    min-width: 70rem;
+    margin-left: 26rem;
+    padding-top: 40px;
+    margin-right: 290px;
+    background: linear-gradient(177.23deg, #2CDBF3 -13.49%, #3A49F9 109.75%);
+    border-radius: 14px;
+    color: white;
+    position: absolute;
+    height: 325px;
+    left: 440px;
+    opacity: 0.85;
+}
+
+.airportInfo_container { 
+    padding-top: 10rem;
+}
+
+
+.airport_search {
+    width: 20rem;
+    padding-top: 10rem;
+    margin-left: 30rem;
+}
+
+.search_title { 
+    color: white;
+}
+
+.metar_button{
+    margin-left: 30rem;
+    background: linear-gradient(135deg, #40DDFF 0%, #14BAE3 19.24%, #13B1E6 68.64%, #11AADF 81.77%, #0B98C5 100%);
+    border-radius: 10px;
+    width: 299px;
+    height: 42px;
+    color: rgba(255, 255, 255, 1);
+    font-weight: bold;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.metar_button:hover {
+	background:linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
+    background-color:#0688fa;
+}
+
+.metar_button:after {
+    content: "";
+    background: grey;
+    display: block;
+    position: absolute;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.metar_button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+.card-title-airportInfo { 
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 30px;
+    width: 70rem;
+}
+
+.airport_location {
+    display: flex;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 20px;
+
+}
+
+.airport_icao {
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 20px;
+
+}
+.airport_location {
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 20px;
+
+}
+.airport_elevation {
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 20px;
+
+}
+.airport_type {
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 20px;
+
+}
+.airport_moreInfo {
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+/* span {
+    width: 13rem;
+} */
