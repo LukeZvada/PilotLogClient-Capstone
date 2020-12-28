@@ -29,7 +29,7 @@ export const AirportInfoList = (props) => {
                     <section className="airportInfo_container">
                         <div className="airport_card" style={{width: "20rem"}}>
                             <div className="airportcard-body">
-                                    <h1 className="card-title">{
+                                    <h1 className="card-title-airportInfo">{
                                         airportInfo.name}</h1>
                                     <div className="airport_location">
                                         <span>Location:</span> 

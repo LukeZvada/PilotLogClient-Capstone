@@ -75,7 +75,7 @@ div#root {
     transition: 0s
 }
 
-.card-title { 
+.card-title-airportInfo { 
     display: flex;
     justify-content: center;
     font-size: 24px;
@@ -121,6 +121,6 @@ div#root {
     font-size: 20px;
 }
 
-span {
+/* span {
     width: 13rem;
-}
+} */
