@@ -25,7 +25,15 @@ export const FlightLogStatistics = (props) => {
 
     // calculation for total Number of Instrument Approaches
     let totalInstrumentApproaches = 0
-    flights.forEach(flight => totalInstrumentApproaches =+ flight.number_of_instrument_approaches)
+    flights.forEach(flight => totalInstrumentApproaches += flight.number_of_instrument_approaches)
+
+    //calculation for total flight time
+    let totalFlightTime = 0 
+    flights.forEach(flight => totalFlightTime += flight.total_flight_time)
+
+    //calculation for total training received 
+    let totalTrainingReceived = 0 
+    flights.forEach(flight => totalTrainingReceived += flight.flight_training_received)
 
     return (
         <>
@@ -55,13 +63,13 @@ export const FlightLogStatistics = (props) => {
                 {/* <div className="card-title">Primary card title</div> */}
                 <div className="statistics-card-body">
                         <div className="card-body">
-                            <p className="statistic-text"><QueryBuilderIcon fontSize="large" />123.4</p>
+                            <p className="statistic-text"><QueryBuilderIcon fontSize="large" />{totalFlightTime}</p>
                         </div>
                 </div>
                 {/* <div className="card-title">Primary card title</div> */}
                 <div className="statistics-card-body">
                         <div className="card-body">
-                            <p className="statistic-text"><QueryBuilderIcon fontSize="large" />100.4</p>
+                            <p className="statistic-text"><QueryBuilderIcon fontSize="large" />{totalTrainingReceived}</p>
                         </div>
                 </div>
             </section>
