@@ -235,7 +235,7 @@ export const FlightForm = (props) => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label className="form-label" htmlFor="airplane_single_multi_hours">Airplane Single / Mutli Hours</label>
+                    <label className="form-label" htmlFor="airplane_single_multi_hours">Airplane Type Hours</label>
                     <input type="number" name="airplane_single_multi_hours" required className="form-control"
                         placeholder="Multi / Single Hours"
                         defaultValue={flight.airplane_single_multi_hours}
