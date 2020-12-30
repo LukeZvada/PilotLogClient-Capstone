@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useReducer } from "react"
+import React, { useContext, useEffect } from "react"
 import { FlightLogContext } from "./FlightLogProvider"
 import FlightLandIcon from '@material-ui/icons/FlightLand';
 import CloudIcon from '@material-ui/icons/Cloud';
@@ -8,8 +8,6 @@ import "./FlightLogDashboard.css"
 
 export const FlightLogStatistics = (props) => {
     const { flights, getFlights } = useContext(FlightLogContext)
-
-    // const currentUserId = parseInt(localStorage.getItem("tourVana_username"))
 
     useEffect(() => {
         getFlights()
