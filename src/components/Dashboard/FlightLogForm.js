@@ -105,7 +105,7 @@ export const FlightForm = (props) => {
     return (
         <form className="new_flight_form">
             <article className="form_title">
-                <h2>Log A Flight</h2>
+                <h2>LOG A FLIGHT</h2>
             </article>
             <fieldset>
                 <div className="form-group">
