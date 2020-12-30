@@ -225,7 +225,7 @@ p {
 
 .statistic-text { 
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     color: white;
     font-size: 30px;
 }

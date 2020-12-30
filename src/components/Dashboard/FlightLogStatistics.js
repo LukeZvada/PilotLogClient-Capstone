@@ -24,31 +24,31 @@ export const FlightLogStatistics = (props) => {
                 {/* <div class="card-title">Primary card title</div> */}
                 <div className="statistics-card-body">
                         <div className="card-body">
-                            <p className="statistic-text"><FlightLandIcon fontSize="large"/>123.45</p>
+                            <p className="statistic-text"><FlightLandIcon fontSize="large"/>56</p>
                         </div>
                 </div>
                 {/* <div className="card-title">Primary card title</div> */}
                 <div className="statistics-card-body">
                         <div className="card-body">
-                            <p className="statistic-text"><FlightLandIcon fontSize="large"/>123.45</p>
+                            <p className="statistic-text"><FlightLandIcon fontSize="large"/>42</p>
                         </div>
                 </div>
                 {/* <div className="card-title">Primary card title</div> */}
                 <div className="statistics-card-body">
                         <div className="card-body">
-                            <p className="statistic-text"><CloudIcon fontSize="large" />123.45</p>
+                            <p className="statistic-text"><CloudIcon fontSize="large" />15</p>
                         </div>
                 </div>
                 {/* <div className="card-title">Primary card title</div> */}
                 <div className="statistics-card-body">
                         <div className="card-body">
-                            <p className="statistic-text"><QueryBuilderIcon fontSize="large" />123.45</p>
+                            <p className="statistic-text"><QueryBuilderIcon fontSize="large" />123.4</p>
                         </div>
                 </div>
                 {/* <div className="card-title">Primary card title</div> */}
                 <div className="statistics-card-body">
                         <div className="card-body">
-                            <p className="statistic-text"><QueryBuilderIcon fontSize="large" />123.45</p>
+                            <p className="statistic-text"><QueryBuilderIcon fontSize="large" />100.4</p>
                         </div>
                 </div>
             </section>
