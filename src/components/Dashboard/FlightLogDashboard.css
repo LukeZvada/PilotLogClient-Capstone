@@ -249,3 +249,8 @@ p {
     margin-bottom: 65px !important;
     font-weight: 800 !important;
 }
+
+.buttonColumn {
+    display: flex;
+    justify-content: center;
+}
