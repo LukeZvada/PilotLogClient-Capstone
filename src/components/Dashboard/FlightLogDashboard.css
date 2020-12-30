@@ -27,18 +27,19 @@
 }
 
 .flightlog-card { 
-    height: 100vh;
+    height: 65vh;
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
     flex-wrap: wrap;
     margin-left: 25rem;
     margin-bottom: 150px;
+    /* margin-top: -15rem; */
     /* align-content: center; */
 }
 
 .card { 
-    width: 261px;
+    width: 344px !important;
     height: 277px;
     margin-left: 90px;
     margin-top: 150px;
