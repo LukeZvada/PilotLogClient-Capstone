@@ -21,7 +21,7 @@ export const FullFlightDetails = (props) => {
             <article>
                 <div className="flightlog_title">Flight Details</div>
             </article>
-            <article className="flightlog-card">
+            <article className="flightDetails-card">
 
                     return <section key={singleFlight.id}>
                         <div className="details_card" style={{width: "20rem"}}>
