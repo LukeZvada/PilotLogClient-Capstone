@@ -109,7 +109,7 @@ export const FlightForm = (props) => {
             </article>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="date"></label>
+                    <label className="form-label" htmlFor="date">Date:</label>
                     <input type="date" name="date" required autoFocus className="form-control"
                         placeholder="Date"
                         defaultValue={flight.date}
@@ -118,7 +118,7 @@ export const FlightForm = (props) => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="make_and_model"></label>
+                    <label className="form-label" htmlFor="make_and_model">Make and Model:</label>
                     <input type="text" name="make_and_model" required className="form-control"
                         placeholder="Make and Model"
                         defaultValue={flight.make_and_model}
@@ -128,7 +128,7 @@ export const FlightForm = (props) => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="aircraftId"></label>
+                    <label className="form-label" htmlFor="aircraftId">Aircraft Id:</label>
                     <input type="text" name="aircraftId" required className="form-control"
                         placeholder="aircraftId"
                         defaultValue={flight.aircraftId}
@@ -138,7 +138,7 @@ export const FlightForm = (props) => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="fromAirport"></label>
+                    <label className="form-label" htmlFor="fromAirport">From:</label>
                     <input type="text" name="fromAirport" required className="form-control"
                         placeholder="From"
                         defaultValue={flight.fromAirport}
@@ -172,7 +172,7 @@ export const FlightForm = (props) => {
             </section>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="to"></label>
+                    <label className="form-label" htmlFor="to">To:</label>
                     <input type="text" name="to" required className="form-control"
                         placeholder="To"
                         defaultValue={flight.to}
@@ -182,7 +182,7 @@ export const FlightForm = (props) => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="landingsDay"></label>
+                    <label className="form-label" htmlFor="landingsDay">Landings (day):</label>
                     <input type="number" name="landingsDay" required className="form-control"
                         placeholder="Landings Day"
                         defaultValue={flight.landingsDay}
@@ -192,7 +192,7 @@ export const FlightForm = (props) => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="landingsNight"></label>
+                    <label className="form-label" htmlFor="landingsNight">Landings (Night): </label>
                     <input type="number" name="landingsNight" required className="form-control"
                         placeholder="Landings Night"
                         defaultValue={flight.landingsNight}
@@ -202,7 +202,7 @@ export const FlightForm = (props) => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="number_of_instrument_approaches"></label>
+                    <label className="form-label" htmlFor="number_of_instrument_approaches">Number of Instrument Approaches:</label>
                     <input type="number" name="number_of_instrument_approaches" required className="form-control"
                         placeholder="Number Of Instrument Approaches"
                         defaultValue={flight.number_of_instrument_approaches}
@@ -212,7 +212,7 @@ export const FlightForm = (props) => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="type_and_location"></label>
+                    <label className="form-label" htmlFor="type_and_location">Type and Location:</label>
                     <input type="text" name="type_and_location" required className="form-control"
                         placeholder="Type and Location"
                         defaultValue={flight.type_and_location}
@@ -222,6 +222,7 @@ export const FlightForm = (props) => {
             </fieldset>
             <fieldset>
                 <div className="form-group radio">
+                    <label className="form-label" htmlFor="airplane_single_multi">Aircraft Type:</label>
                 <div>
                     <input className="radio-1" type="radio" value="True" name="airplane_single_multi" 
                         defaultValue={flight.airplane_single_multi}
@@ -234,7 +235,7 @@ export const FlightForm = (props) => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="airplane_single_multi_hours"></label>
+                    <label className="form-label" htmlFor="airplane_single_multi_hours">Airplane Single / Mutli Hours</label>
                     <input type="number" name="airplane_single_multi_hours" required className="form-control"
                         placeholder="Multi / Single Hours"
                         defaultValue={flight.airplane_single_multi_hours}
@@ -244,7 +245,7 @@ export const FlightForm = (props) => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="instrumentActual"></label>
+                    <label className="form-label" htmlFor="instrumentActual">Instrument Actual:</label>
                     <input type="number" name="instrumentActual" required className="form-control"
                         placeholder="Instrument Actual"
                         defaultValue={flight.instrumentActual}
@@ -254,7 +255,7 @@ export const FlightForm = (props) => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="simulator_hood"></label>
+                    <label className="form-label" htmlFor="simulator_hood">Simulator / Hood:</label>
                     <input type="number" name="simulator_hood" required className="form-control"
                         placeholder="Simulator / Hood"
                         defaultValue={flight.simulator_hood}
@@ -264,7 +265,7 @@ export const FlightForm = (props) => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="ftd_or_simulator"></label>
+                    <label className="form-label" htmlFor="ftd_or_simulator">FTD or Simulator:</label>
                     <input type="number" name="ftd_or_simulator" required className="form-control"
                         placeholder="FTD or Simulator"
                         defaultValue={flight.ftd_or_simulator}
@@ -274,7 +275,7 @@ export const FlightForm = (props) => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="night"></label>
+                    <label className="form-label" htmlFor="night">Night Hours:</label>
                     <input type="number" name="night" required className="form-control"
                         placeholder="Night"
                         defaultValue={flight.night}
@@ -284,7 +285,7 @@ export const FlightForm = (props) => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="cross_country_all"></label>
+                    <label className="form-label" htmlFor="cross_country_all">Cross Country (All):</label>
                     <input type="number" name="cross_country_all" required className="form-control"
                         placeholder="Cross Country All"
                         defaultValue={flight.cross_country_all}
@@ -294,7 +295,7 @@ export const FlightForm = (props) => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="cross_country_fivezero"></label>
+                    <label className="form-label" htmlFor="cross_country_fivezero">Cross Country Over 50nm:</label>
                     <input type="number" name="cross_country_fivezero" required className="form-control"
                         placeholder="Cross Country Over 50nm"
                         defaultValue={flight.cross_country_fivezero}
@@ -304,7 +305,7 @@ export const FlightForm = (props) => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="pilot_in_command"></label>
+                    <label className="form-label" htmlFor="pilot_in_command">Pilot In Command:</label>
                     <input type="number" name="pilot_in_command" required className="form-control"
                         placeholder="Pilot In Command"
                         defaultValue={flight.pilot_in_command}
@@ -314,7 +315,7 @@ export const FlightForm = (props) => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="solo"></label>
+                    <label className="form-label" htmlFor="solo">Solo:</label>
                     <input type="number" name="solo" required className="form-control"
                         placeholder="Solo"
                         defaultValue={flight.solo}
@@ -324,7 +325,7 @@ export const FlightForm = (props) => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="ground_training"></label>
+                    <label className="form-label" htmlFor="ground_training">Ground Training:</label>
                     <input type="number" name="ground_training" required className="form-control"
                         placeholder="Ground Training"
                         defaultValue={flight.ground_training}
@@ -334,7 +335,7 @@ export const FlightForm = (props) => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="flight_training_received"></label>
+                    <label className="form-label" htmlFor="flight_training_received">Flight Training Received:</label>
                     <input type="number" name="flight_training_received" required className="form-control"
                         placeholder="Flight Training Received"
                         defaultValue={flight.flight_training_received}
@@ -344,7 +345,7 @@ export const FlightForm = (props) => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="flight_training_given"></label>
+                    <label className="form-label" htmlFor="flight_training_given">Flight Training Given</label>
                     <input type="number" name="flight_training_given" required className="form-control"
                         placeholder="Flight Training Given"
                         defaultValue={flight.flight_training_given}
@@ -354,7 +355,7 @@ export const FlightForm = (props) => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="total_flight_time"></label>
+                    <label className="form-label" htmlFor="total_flight_time">Total Flight Time: </label>
                     <input type="number" name="total_flight_time" required className="form-control"
                         placeholder="Total Flight Time"
                         defaultValue={flight.total_flight_time}
