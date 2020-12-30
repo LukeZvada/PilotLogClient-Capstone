@@ -27,12 +27,12 @@ export const FlightLogList = (props) => {
                         <div className="card" style={{width: "20rem"}}>
                             <div className="card-body">
                                 <h5 className="card-title">{flight.to} &rarr; {flight.fromAirport}</h5>
-                                <h6 className="card-subtitle mb-2 text-muted log-date">Date: {flight.date}</h6>
+                                <h6 className="card-subtitle mb-2 text-muted log-date">{flight.date}</h6>
                                 <div className="divider">________________________________________</div>
                                 <p>Total Flight Time: {flight.total_flight_time}</p>
                                 <p>Total Landings: {flight.landingsDay}</p>
-                                <p>Aircraft: {flight.make_and_model}</p>
-                                <p>Aircraft Ident No.: {flight.aircraftId}</p>
+                                <p>Make And Model: {flight.make_and_model}</p>
+                                <p>Aircraft Id: {flight.aircraftId}</p>
                                 <Button className="flightsDetailsButton" 
                                         onClick={() => {
                                                 props.history.push(`/flightdetails/${flight.id}`)

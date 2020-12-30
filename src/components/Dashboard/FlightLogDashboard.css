@@ -45,9 +45,9 @@
     font-size: 30px;
 }
 
-/* .log-date { 
-    border-bottom: 3px solid white;
-} */
+.log-date { 
+    color: rgb(255, 255, 255) !important;
+}
 
 .card { 
     width: 344px !important;
@@ -58,6 +58,7 @@
     background: linear-gradient(177.23deg, #2CDBF3 -13.49%, #3A49F9 109.75%);
     border-radius: 14px;
     color: white;
+    opacity: .8;
 }
 
 .card-body { 
@@ -78,6 +79,7 @@
     width: 50%;
     letter-spacing: 4px;
     font-weight: 600;
+
 }
 
 .statistics-card { 
@@ -89,6 +91,7 @@
     align-content: center;
     padding-top: 7rem;
     margin-left: 20rem;
+    opacity: .9;
     /* height: 4rem; */
 }
 
