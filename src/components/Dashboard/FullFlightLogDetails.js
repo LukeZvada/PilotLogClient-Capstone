@@ -52,6 +52,7 @@ export const FullFlightDetails = (props) => {
                                 <p>Flight Training Received: {singleFlight.flight_training_received}</p>
                                 <p>Flight Training Given: {singleFlight.flight_training_given}</p>
                                 <p>Total Flight Time: {singleFlight.total_flight_time}</p>
+                                <p>Remarks: {singleFlight.remarks}</p>
                             </div>
                             <div className="buttonColumn">
                                 <button className="edit_flight_button" 
