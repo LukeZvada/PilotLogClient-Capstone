@@ -1,6 +1,6 @@
 # PilotLog 
 
-Full Stack capstone for NSS. Currently just setting up the repo in preparation for the chaos. 
+Full Stack capstone for Nashville Software School. 
 
 <img src="Cover.png" >
 
