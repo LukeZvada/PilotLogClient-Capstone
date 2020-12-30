@@ -14,6 +14,15 @@ export const FullFlightDetails = (props) => {
         getSingleFlight(currentFlightId)
     }, [])
 
+    const delete_prompt = (id) => {
+        var retVal = window.confirm("Are you sure you want to delete your comment?");
+            if( retVal == true ) {
+                deleteFlight(id)
+                return true;
+            } else {
+                return false;
+            }
+    }
 
 
     return (
@@ -63,7 +72,7 @@ export const FullFlightDetails = (props) => {
                                 </Button>
                                 <Button className="delete_flight_button" variant="contained"
                                     onClick={
-                                        () => deleteFlight(singleFlight.id)
+                                        () => delete_prompt(singleFlight.id)
                                         .then(props.history.push('/dashboard'))
                                     }>
                                     Delete

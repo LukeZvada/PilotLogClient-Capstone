@@ -239,3 +239,13 @@ p {
     margin-right: 45px !important;
     font-weight: 800 !important;
 }
+
+.delete_flight_button { 
+    background: transparent !important;
+    border: 1px red solid !important;
+    color: white !important;
+    width: 8.5rem !important;
+    margin-top: 45px !important;
+    margin-bottom: 65px !important;
+    font-weight: 800 !important;
+}
