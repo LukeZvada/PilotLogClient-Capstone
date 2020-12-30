@@ -24,6 +24,8 @@
     margin-bottom: -95px;
     color: rgba(83, 185, 234, 1);
     width: 50%;
+    letter-spacing: 4px;
+    font-weight: 600;
 }
 
 .flightlog-card { 
@@ -34,7 +36,8 @@
     flex-wrap: wrap;
     margin-left: 25rem;
     margin-bottom: 150px;
-    /* margin-top: -15rem; */
+    overflow: scroll;
+    margin-top: 6rem;
     /* align-content: center; */
 }
 
@@ -42,7 +45,7 @@
     width: 344px !important;
     height: 277px;
     margin-left: 90px;
-    margin-top: 150px;
+    margin-top: 50px;
     margin-right: 190px;
     background: linear-gradient(177.23deg, #2CDBF3 -13.49%, #3A49F9 109.75%);
     border-radius: 14px;
@@ -60,6 +63,8 @@
     margin-bottom: -95px;
     color: rgba(83, 185, 234, 1);
     width: 50%;
+    letter-spacing: 4px;
+    font-weight: 600;
 }
 
 .statistics-card { 
