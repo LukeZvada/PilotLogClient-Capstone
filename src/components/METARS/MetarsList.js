@@ -22,7 +22,7 @@ export const MetarList = (props) => {
                     <input onChange={event => setAirport(event.target.value)} class="form-control" type="text" placeholder="e.g. KBNA" aria-label="Search"></input>
                 </div>
                 <fieldset>
-                    <div className="form-group radio">
+                    <div className="form-group-metars radio">
                         <div>Format: </div>
                         <div >
                             <input className = "metar_radio_1" type="radio" value="info" name="formatType" 

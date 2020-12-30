@@ -24,33 +24,51 @@
     margin-bottom: -95px;
     color: rgba(83, 185, 234, 1);
     width: 50%;
+    letter-spacing: 4px;
+    font-weight: 600;
 }
 
 .flightlog-card { 
-    height: 100vh;
+    height: 65vh;
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
     flex-wrap: wrap;
     margin-left: 25rem;
     margin-bottom: 150px;
+    overflow: scroll;
+    margin-top: 6rem;
     /* align-content: center; */
 }
 
+.card-title { 
+    font-size: 30px;
+}
+
+.log-date { 
+    color: rgb(255, 255, 255) !important;
+}
+
 .card { 
-    width: 261px;
-    height: 277px;
+    width: 344px !important;
+    height: 300px;
     margin-left: 90px;
-    margin-top: 150px;
+    margin-top: 50px;
     margin-right: 190px;
     background: linear-gradient(177.23deg, #2CDBF3 -13.49%, #3A49F9 109.75%);
     border-radius: 14px;
+    color: white;
+    opacity: .8;
 }
 
 .card-body { 
     border-radius: 125px;
 }
 
+.flightsDetailsButton{ 
+    color: white !important;
+    margin-left: 11.2rem !important;
+}
 .flightstatistics_title {
     display: flex;
     position: relative;
@@ -59,6 +77,9 @@
     margin-bottom: -95px;
     color: rgba(83, 185, 234, 1);
     width: 50%;
+    letter-spacing: 4px;
+    font-weight: 600;
+
 }
 
 .statistics-card { 
@@ -70,6 +91,7 @@
     align-content: center;
     padding-top: 7rem;
     margin-left: 20rem;
+    opacity: .9;
     /* height: 4rem; */
 }
 
@@ -108,7 +130,7 @@
 
 .details_card { 
     min-width: 50rem;
-    height: 61rem;
+    height: 62rem;
     /* margin-left: 90px; */
     margin-top: 150px;
     margin-right: 290px;
@@ -174,4 +196,36 @@
     flex-direction: row;
     color: white;
     width: 18rem;
+}
+
+.divider { 
+    color: linear-gradient(90deg, #FFFFFF 0%, #45DEFF 100%);
+    font-weight: 900;
+    margin-top: -.5rem;
+    margin-bottom: .5rem;
+}
+
+.flightDetails-card {
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 25rem;
+    margin-bottom: 150px;
+    opacity: .8;
+    color: white;
+}
+
+p { 
+    /* font-size: 20px; */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.statistic-text { 
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    font-size: 30px;
 }
