@@ -42,13 +42,10 @@ div#root {
     margin-left: 40px;
 }
 
-.radio { 
-    display: flex;
-    /* justify-content: center; */
-}
+
 
 .form-group-metars {
-    width: 40rem;
+    margin-left: -3rem;
     align-items: center;
     display: flex;
     justify-content: center;
