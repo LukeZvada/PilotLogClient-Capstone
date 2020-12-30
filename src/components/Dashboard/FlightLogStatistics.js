@@ -16,10 +16,17 @@ export const FlightLogStatistics = (props) => {
     }, [])
 
     // calculation for total landingsDay
-    let totalLandings = 0
-    flights.forEach(flight => totalLandings += flight.landingsDay)
+    let totalLandingsDay = 0
+    flights.forEach(flight => totalLandingsDay += flight.landingsDay)
 
     // calculation for total landingsNight
+    let totalLandingsNight = 0
+    flights.forEach(flight => totalLandingsNight += flight.landingsNight)
+
+    // calculation for total Number of Instrument Approaches
+    let totalInstrumentApproaches = 0
+    flights.forEach(flight => totalInstrumentApproaches =+ flight.number_of_instrument_approaches)
+
     return (
         <>
             <article>
@@ -29,20 +36,20 @@ export const FlightLogStatistics = (props) => {
                 {/* <div class="card-title">Primary card title</div> */}
                 <div className="statistics-card-body">
                         <div className="card-body">
-                            <p className="statistic-text"><FlightLandIcon fontSize="large"/> {totalLandings}
+                            <p className="statistic-text"><FlightLandIcon fontSize="large"/> {totalLandingsDay}
                             </p>
                         </div>
                 </div>
                 {/* <div className="card-title">Primary card title</div> */}
                 <div className="statistics-card-body">
                         <div className="card-body">
-                            <p className="statistic-text"><FlightLandIcon fontSize="large"/>42</p>
+                            <p className="statistic-text"><FlightLandIcon fontSize="large"/>{totalLandingsNight}</p>
                         </div>
                 </div>
                 {/* <div className="card-title">Primary card title</div> */}
                 <div className="statistics-card-body">
                         <div className="card-body">
-                            <p className="statistic-text"><CloudIcon fontSize="large" />15</p>
+                            <p className="statistic-text"><CloudIcon fontSize="large" />{totalInstrumentApproaches}</p>
                         </div>
                 </div>
                 {/* <div className="card-title">Primary card title</div> */}
