@@ -63,7 +63,8 @@ export const FlightForm = (props) => {
                     ground_training: parseInt(flight.ground_training),
                     flight_training_received: parseInt(flight.flight_training_received),
                     flight_training_given: parseInt(flight.flight_training_given),
-                    total_flight_time: parseInt(flight.total_flight_time)
+                    total_flight_time: parseInt(flight.total_flight_time),
+                    remarks: flight.remarks
                     // userId: parseInt(localStorage.getItem("pilotLogUser_Id"))
                 })
                     .then(() => props.history.push("/dashboard"))
@@ -92,7 +93,8 @@ export const FlightForm = (props) => {
                     ground_training: parseInt(flight.ground_training),
                     flight_training_received: parseInt(flight.flight_training_received),
                     flight_training_given: parseInt(flight.flight_training_given),
-                    total_flight_time: parseInt(flight.total_flight_time)
+                    total_flight_time: parseInt(flight.total_flight_time),
+                    remarks: flight.remarks
                     // userId: parseInt(localStorage.getItem("pilotLogUser_Id"))
                 })
                     .then(() => props.history.push("/dashboard"))
@@ -104,21 +106,23 @@ export const FlightForm = (props) => {
 
     return (
         <form className="new_flight_form">
-            
+            <article className="form_title">
+                <h2>LOG A FLIGHT</h2>
+            </article>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="date"></label>
+                    <label className="form-label" htmlFor="date">Date:</label>
                     <input type="date" name="date" required autoFocus className="form-control"
                         placeholder="Date"
                         defaultValue={flight.date}
-                        onChange={handleControlledInputChange}></input>
+                        onChange={handleControlledInputChange} />
                 </div>
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="make_and_model"></label>
+                    <label className="form-label" htmlFor="make_and_model">Make and Model:</label>
                     <input type="text" name="make_and_model" required className="form-control"
-                        placeholder="Make and Model"
+                        placeholder="Cessna 172"
                         defaultValue={flight.make_and_model}
                         onChange={handleControlledInputChange}
                     />
@@ -126,9 +130,9 @@ export const FlightForm = (props) => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="aircraftId"></label>
+                    <label className="form-label" htmlFor="aircraftId">Aircraft Id:</label>
                     <input type="text" name="aircraftId" required className="form-control"
-                        placeholder="aircraftId"
+                        placeholder="N189k"
                         defaultValue={flight.aircraftId}
                         onChange={handleControlledInputChange}
                     />
@@ -136,16 +140,16 @@ export const FlightForm = (props) => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="fromAirport"></label>
+                    <label className="form-label" htmlFor="fromAirport">From:</label>
                     <input type="text" name="fromAirport" required className="form-control"
-                        placeholder="From"
+                        placeholder="e.g. KBNA"
                         defaultValue={flight.fromAirport}
                         onChange={handleControlledInputChange}
                     />
                 </div>
             </fieldset>
             <section>
-                <Button variant="primary" onClick={handleShow}>
+                <Button className="between_button" variant="secondary" onClick={handleShow}>
                     Add InBetween Stop
                 </Button>
 
@@ -170,9 +174,9 @@ export const FlightForm = (props) => {
             </section>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="to"></label>
+                    <label className="form-label" htmlFor="to">To:</label>
                     <input type="text" name="to" required className="form-control"
-                        placeholder="To"
+                        placeholder="e.g. KCLE"
                         defaultValue={flight.to}
                         onChange={handleControlledInputChange}
                     />
@@ -180,9 +184,9 @@ export const FlightForm = (props) => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="landingsDay"></label>
+                    <label className="form-label" htmlFor="landingsDay">Landings (day):</label>
                     <input type="number" name="landingsDay" required className="form-control"
-                        placeholder="Landings Day"
+                        placeholder="Number of landings during the day"
                         defaultValue={flight.landingsDay}
                         onChange={handleControlledInputChange}
                     />
@@ -190,9 +194,9 @@ export const FlightForm = (props) => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="landingsNight"></label>
+                    <label className="form-label" htmlFor="landingsNight">Landings (Night): </label>
                     <input type="number" name="landingsNight" required className="form-control"
-                        placeholder="Landings Night"
+                        placeholder="Number of landings at night"
                         defaultValue={flight.landingsNight}
                         onChange={handleControlledInputChange}
                     />
@@ -200,7 +204,7 @@ export const FlightForm = (props) => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="number_of_instrument_approaches"></label>
+                    <label className="form-label" htmlFor="number_of_instrument_approaches">Number of Instrument Approaches:</label>
                     <input type="number" name="number_of_instrument_approaches" required className="form-control"
                         placeholder="Number Of Instrument Approaches"
                         defaultValue={flight.number_of_instrument_approaches}
@@ -210,9 +214,9 @@ export const FlightForm = (props) => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="type_and_location"></label>
+                    <label className="form-label" htmlFor="type_and_location">Type and Location:</label>
                     <input type="text" name="type_and_location" required className="form-control"
-                        placeholder="Type and Location"
+                        placeholder="Instrument Approach Type and Location"
                         defaultValue={flight.type_and_location}
                         onChange={handleControlledInputChange}
                     />
@@ -220,11 +224,12 @@ export const FlightForm = (props) => {
             </fieldset>
             <fieldset>
                 <div className="form-group radio">
+                    <label className="form-label" htmlFor="airplane_single_multi">Aircraft Type:</label>
                 <div>
-                    <input type="radio" value="True" name="airplane_single_multi" 
+                    <input className="radio-1" type="radio" value="True" name="airplane_single_multi" 
                         defaultValue={flight.airplane_single_multi}
                         onChange={handleControlledInputChange}/> Single
-                    <input type="radio" value="False" name="airplane_single_multi"
+                    <input className="radio-2" type="radio" value="False" name="airplane_single_multi"
                         defaultValue={flight.airplane_single_multi}
                         onChange={handleControlledInputChange} /> Multi
                 </div>
@@ -232,9 +237,9 @@ export const FlightForm = (props) => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="airplane_single_multi_hours"></label>
+                    <label className="form-label" htmlFor="airplane_single_multi_hours">Aircraft Type Hours:</label>
                     <input type="number" name="airplane_single_multi_hours" required className="form-control"
-                        placeholder="Multi / Single Hours"
+                        placeholder="Aircraft Type Hours"
                         defaultValue={flight.airplane_single_multi_hours}
                         onChange={handleControlledInputChange}
                     />
@@ -242,9 +247,9 @@ export const FlightForm = (props) => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="instrumentActual"></label>
+                    <label className="form-label" htmlFor="instrumentActual">Instrument Actual:</label>
                     <input type="number" name="instrumentActual" required className="form-control"
-                        placeholder="Instrument Actual"
+                        placeholder="Instrument Actual Hours"
                         defaultValue={flight.instrumentActual}
                         onChange={handleControlledInputChange}
                     />
@@ -252,9 +257,9 @@ export const FlightForm = (props) => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="simulator_hood"></label>
+                    <label className="form-label" htmlFor="simulator_hood">Simulator / Hood:</label>
                     <input type="number" name="simulator_hood" required className="form-control"
-                        placeholder="Simulator / Hood"
+                        placeholder="Simulator / Hood Hours"
                         defaultValue={flight.simulator_hood}
                         onChange={handleControlledInputChange}
                     />
@@ -262,9 +267,9 @@ export const FlightForm = (props) => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="ftd_or_simulator"></label>
+                    <label className="form-label" htmlFor="ftd_or_simulator">FTD or Simulator:</label>
                     <input type="number" name="ftd_or_simulator" required className="form-control"
-                        placeholder="FTD or Simulator"
+                        placeholder="FTD or Simulator Hours"
                         defaultValue={flight.ftd_or_simulator}
                         onChange={handleControlledInputChange}
                     />
@@ -272,9 +277,9 @@ export const FlightForm = (props) => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="night"></label>
+                    <label className="form-label" htmlFor="night">Night Hours:</label>
                     <input type="number" name="night" required className="form-control"
-                        placeholder="Night"
+                        placeholder="Night Hours"
                         defaultValue={flight.night}
                         onChange={handleControlledInputChange}
                     />
@@ -282,9 +287,9 @@ export const FlightForm = (props) => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="cross_country_all"></label>
+                    <label className="form-label" htmlFor="cross_country_all">Cross Country (All):</label>
                     <input type="number" name="cross_country_all" required className="form-control"
-                        placeholder="Cross Country All"
+                        placeholder="Cross Country All Hours"
                         defaultValue={flight.cross_country_all}
                         onChange={handleControlledInputChange}
                     />
@@ -292,9 +297,9 @@ export const FlightForm = (props) => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="cross_country_fivezero"></label>
+                    <label className="form-label" htmlFor="cross_country_fivezero">Cross Country Over 50nm:</label>
                     <input type="number" name="cross_country_fivezero" required className="form-control"
-                        placeholder="Cross Country Over 50nm"
+                        placeholder="Cross Country Over 50nm Hours"
                         defaultValue={flight.cross_country_fivezero}
                         onChange={handleControlledInputChange}
                     />
@@ -302,9 +307,9 @@ export const FlightForm = (props) => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="pilot_in_command"></label>
+                    <label className="form-label" htmlFor="pilot_in_command">Pilot In Command:</label>
                     <input type="number" name="pilot_in_command" required className="form-control"
-                        placeholder="Pilot In Command"
+                        placeholder="Pilot In Command Hours"
                         defaultValue={flight.pilot_in_command}
                         onChange={handleControlledInputChange}
                     />
@@ -312,9 +317,9 @@ export const FlightForm = (props) => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="solo"></label>
+                    <label className="form-label" htmlFor="solo">Solo:</label>
                     <input type="number" name="solo" required className="form-control"
-                        placeholder="Solo"
+                        placeholder="Solo Hours"
                         defaultValue={flight.solo}
                         onChange={handleControlledInputChange}
                     />
@@ -322,9 +327,9 @@ export const FlightForm = (props) => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="ground_training"></label>
+                    <label className="form-label" htmlFor="ground_training">Ground Training:</label>
                     <input type="number" name="ground_training" required className="form-control"
-                        placeholder="Ground Training"
+                        placeholder="Ground Training Hours"
                         defaultValue={flight.ground_training}
                         onChange={handleControlledInputChange}
                     />
@@ -332,9 +337,9 @@ export const FlightForm = (props) => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="flight_training_received"></label>
+                    <label className="form-label" htmlFor="flight_training_received">Flight Training Received:</label>
                     <input type="number" name="flight_training_received" required className="form-control"
-                        placeholder="Flight Training Received"
+                        placeholder="Flight Training Received Hours"
                         defaultValue={flight.flight_training_received}
                         onChange={handleControlledInputChange}
                     />
@@ -342,9 +347,9 @@ export const FlightForm = (props) => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="flight_training_given"></label>
+                    <label className="form-label" htmlFor="flight_training_given">Flight Training Given</label>
                     <input type="number" name="flight_training_given" required className="form-control"
-                        placeholder="Flight Training Given"
+                        placeholder="Flight Training Given Hours"
                         defaultValue={flight.flight_training_given}
                         onChange={handleControlledInputChange}
                     />
@@ -352,10 +357,20 @@ export const FlightForm = (props) => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="total_flight_time"></label>
+                    <label className="form-label" htmlFor="total_flight_time">Total Flight Time: </label>
                     <input type="number" name="total_flight_time" required className="form-control"
-                        placeholder="Total Flight Time"
+                        placeholder="Total Flight Time Hours"
                         defaultValue={flight.total_flight_time}
+                        onChange={handleControlledInputChange}
+                    />
+                </div>
+            </fieldset>
+            <fieldset>
+                <div className="form-group">
+                    <label className="form-label" htmlFor="remarks">Remarks: </label>
+                    <input type="text" name="remarks" required className="form-control"
+                        placeholder="Remarks"
+                        defaultValue={flight.remarks}
                         onChange={handleControlledInputChange}
                     />
                 </div>
@@ -365,11 +380,10 @@ export const FlightForm = (props) => {
                     onClick={evt => {
                         evt.preventDefault() 
                         constructNewFlight()
-                    }}
-                    className="btn btn-primary">
+                    }}>
                     Save Flight
                 </Button>
-                <Button className="saveFlightButton" variant="contained" onClick={() => props.history.push(`/dashboard`)}>Cancel</Button>
+                <Button className="cancelFlightButton" variant="contained" onClick={() => props.history.push(`/dashboard`)}>Cancel</Button>
             </section>
         </form>
     )
