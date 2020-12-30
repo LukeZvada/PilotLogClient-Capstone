@@ -41,20 +41,33 @@
     /* align-content: center; */
 }
 
+.card-title { 
+    font-size: 30px;
+}
+
+/* .log-date { 
+    border-bottom: 3px solid white;
+} */
+
 .card { 
     width: 344px !important;
-    height: 277px;
+    height: 300px;
     margin-left: 90px;
     margin-top: 50px;
     margin-right: 190px;
     background: linear-gradient(177.23deg, #2CDBF3 -13.49%, #3A49F9 109.75%);
     border-radius: 14px;
+    color: white;
 }
 
 .card-body { 
     border-radius: 125px;
 }
 
+.flightsDetailsButton{ 
+    color: white !important;
+    margin-left: 11.2rem !important;
+}
 .flightstatistics_title {
     display: flex;
     position: relative;
@@ -181,3 +194,11 @@
     color: white;
     width: 18rem;
 }
+
+.divider { 
+    color: linear-gradient(90deg, #FFFFFF 0%, #45DEFF 100%);
+    font-weight: 900;
+    margin-top: -.5rem;
+    margin-bottom: .5rem;
+}
+
