@@ -229,3 +229,13 @@ p {
     color: white;
     font-size: 30px;
 }
+
+.edit_flight_button { 
+    background: linear-gradient(135deg, #40DDFF 0%, #14BAE3 19.24%, #13B1E6 68.64%, #11AADF 81.77%, #0B98C5 100%) !important;
+    width: 8.5rem !important;
+    color: white !important;
+    margin-top: 45px !important;
+    margin-bottom: 65px !important;
+    margin-right: 45px !important;
+    font-weight: 800 !important;
+}
