@@ -63,7 +63,8 @@ export const FlightForm = (props) => {
                     ground_training: parseInt(flight.ground_training),
                     flight_training_received: parseInt(flight.flight_training_received),
                     flight_training_given: parseInt(flight.flight_training_given),
-                    total_flight_time: parseInt(flight.total_flight_time)
+                    total_flight_time: parseInt(flight.total_flight_time),
+                    remarks: flight.remarks
                     // userId: parseInt(localStorage.getItem("pilotLogUser_Id"))
                 })
                     .then(() => props.history.push("/dashboard"))
@@ -92,7 +93,8 @@ export const FlightForm = (props) => {
                     ground_training: parseInt(flight.ground_training),
                     flight_training_received: parseInt(flight.flight_training_received),
                     flight_training_given: parseInt(flight.flight_training_given),
-                    total_flight_time: parseInt(flight.total_flight_time)
+                    total_flight_time: parseInt(flight.total_flight_time),
+                    remarks: flight.remarks
                     // userId: parseInt(localStorage.getItem("pilotLogUser_Id"))
                 })
                     .then(() => props.history.push("/dashboard"))
@@ -359,6 +361,16 @@ export const FlightForm = (props) => {
                     <input type="number" name="total_flight_time" required className="form-control"
                         placeholder="Total Flight Time Hours"
                         defaultValue={flight.total_flight_time}
+                        onChange={handleControlledInputChange}
+                    />
+                </div>
+            </fieldset>
+            <fieldset>
+                <div className="form-group">
+                    <label className="form-label" htmlFor="remarks">Remarks: </label>
+                    <input type="text" name="remarks" required className="form-control"
+                        placeholder="Remarks"
+                        defaultValue={flight.remarks}
                         onChange={handleControlledInputChange}
                     />
                 </div>
