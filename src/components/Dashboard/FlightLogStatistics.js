@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react"
+import React, { useContext, useEffect, useReducer } from "react"
 import { FlightLogContext } from "./FlightLogProvider"
 import FlightLandIcon from '@material-ui/icons/FlightLand';
 import CloudIcon from '@material-ui/icons/Cloud';
@@ -15,6 +15,11 @@ export const FlightLogStatistics = (props) => {
         getFlights()
     }, [])
 
+    // calculation for total landingsDay
+    let totalLandings = 0
+    flights.forEach(flight => totalLandings += flight.landingsDay)
+
+    // calculation for total landingsNight
     return (
         <>
             <article>
@@ -24,7 +29,8 @@ export const FlightLogStatistics = (props) => {
                 {/* <div class="card-title">Primary card title</div> */}
                 <div className="statistics-card-body">
                         <div className="card-body">
-                            <p className="statistic-text"><FlightLandIcon fontSize="large"/>56</p>
+                            <p className="statistic-text"><FlightLandIcon fontSize="large"/> {totalLandings}
+                            </p>
                         </div>
                 </div>
                 {/* <div className="card-title">Primary card title</div> */}
