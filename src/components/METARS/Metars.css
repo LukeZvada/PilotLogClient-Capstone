@@ -46,3 +46,10 @@ div#root {
     display: flex;
     /* justify-content: center; */
 }
+
+.form-group-metars {
+    width: 40rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
