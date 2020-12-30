@@ -223,10 +223,10 @@ export const FlightForm = (props) => {
             <fieldset>
                 <div className="form-group radio">
                 <div>
-                    <input type="radio" value="True" name="airplane_single_multi" 
+                    <input className="radio-1" type="radio" value="True" name="airplane_single_multi" 
                         defaultValue={flight.airplane_single_multi}
                         onChange={handleControlledInputChange}/> Single
-                    <input type="radio" value="False" name="airplane_single_multi"
+                    <input className="radio-2" type="radio" value="False" name="airplane_single_multi"
                         defaultValue={flight.airplane_single_multi}
                         onChange={handleControlledInputChange} /> Multi
                 </div>
@@ -367,11 +367,10 @@ export const FlightForm = (props) => {
                     onClick={evt => {
                         evt.preventDefault() 
                         constructNewFlight()
-                    }}
-                    className="btn btn-primary">
+                    }}>
                     Save Flight
                 </Button>
-                <Button className="saveFlightButton" variant="contained" onClick={() => props.history.push(`/dashboard`)}>Cancel</Button>
+                <Button className="cancelFlightButton" variant="contained" onClick={() => props.history.push(`/dashboard`)}>Cancel</Button>
             </section>
         </form>
     )

@@ -135,3 +135,30 @@
     background: linear-gradient(135deg, #40DDFF 0%, #14BAE3 19.24%, #13B1E6 68.64%, #11AADF 81.77%, #0B98C5 100%) !important;
     width: 12.5rem !important;
 }
+
+.radio-1 {
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+.radio-2 { 
+    margin-right: 10px;
+    margin-left: 80px;
+}
+
+.saveFlightButton { 
+    background: linear-gradient(135deg, #40DDFF 0%, #14BAE3 19.24%, #13B1E6 68.64%, #11AADF 81.77%, #0B98C5 100%) !important;
+    width: 8.5rem !important;
+    color: white !important;
+    margin-top: 45px !important;
+    margin-bottom: 65px !important;
+    margin-right: 45px !important;
+}
+.cancelFlightButton { 
+    background: transparent !important;
+    border: 1px #13B1E6 solid !important;
+    color: white !important;
+    width: 8.5rem !important;
+    margin-top: 45px !important;
+    margin-bottom: 65px !important;
+}
