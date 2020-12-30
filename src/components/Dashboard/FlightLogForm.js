@@ -104,14 +104,16 @@ export const FlightForm = (props) => {
 
     return (
         <form className="new_flight_form">
-            
+            <article className="form_title">
+                <h2>Log A Flight</h2>
+            </article>
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="date"></label>
                     <input type="date" name="date" required autoFocus className="form-control"
                         placeholder="Date"
                         defaultValue={flight.date}
-                        onChange={handleControlledInputChange}></input>
+                        onChange={handleControlledInputChange} />
                 </div>
             </fieldset>
             <fieldset>
@@ -145,7 +147,7 @@ export const FlightForm = (props) => {
                 </div>
             </fieldset>
             <section>
-                <Button variant="primary" onClick={handleShow}>
+                <Button className="between_button" variant="secondary" onClick={handleShow}>
                     Add InBetween Stop
                 </Button>
 

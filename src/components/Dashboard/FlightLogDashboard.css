@@ -97,8 +97,9 @@
 }
 
 .new_flight_form { 
-    width: 30%; 
-    margin-left: 50rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .radio {
@@ -113,4 +114,24 @@
     margin-right: 290px;
     background: linear-gradient(177.23deg, #2CDBF3 -13.49%, #3A49F9 109.75%);
     border-radius: 14px;
+}
+
+.form_title { 
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+}
+
+.form-group { 
+    width: 40rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.between_button {
+    background: linear-gradient(135deg, #40DDFF 0%, #14BAE3 19.24%, #13B1E6 68.64%, #11AADF 81.77%, #0B98C5 100%) !important;
+    width: 12.5rem !important;
 }
