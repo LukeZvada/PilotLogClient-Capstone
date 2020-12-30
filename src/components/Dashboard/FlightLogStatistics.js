@@ -1,5 +1,8 @@
 import React, { useContext, useEffect, useState } from "react"
 import { FlightLogContext } from "./FlightLogProvider"
+import FlightLandIcon from '@material-ui/icons/FlightLand';
+import CloudIcon from '@material-ui/icons/Cloud';
+import QueryBuilderIcon from '@material-ui/icons/QueryBuilder';
 import "./FlightLogDashboard.css"
 
 
@@ -21,31 +24,31 @@ export const FlightLogStatistics = (props) => {
                 {/* <div class="card-title">Primary card title</div> */}
                 <div className="statistics-card-body">
                         <div className="card-body">
-                            <p className="card-text">123.45</p>
+                            <p className="statistic-text"><FlightLandIcon fontSize="large"/>123.45</p>
                         </div>
                 </div>
                 {/* <div className="card-title">Primary card title</div> */}
                 <div className="statistics-card-body">
                         <div className="card-body">
-                            <p className="card-text">123.45</p>
+                            <p className="statistic-text"><FlightLandIcon fontSize="large"/>123.45</p>
                         </div>
                 </div>
                 {/* <div className="card-title">Primary card title</div> */}
                 <div className="statistics-card-body">
                         <div className="card-body">
-                            <p className="card-text">123.45</p>
+                            <p className="statistic-text"><CloudIcon fontSize="large" />123.45</p>
                         </div>
                 </div>
                 {/* <div className="card-title">Primary card title</div> */}
                 <div className="statistics-card-body">
                         <div className="card-body">
-                            <p className="card-text">123.45</p>
+                            <p className="statistic-text"><QueryBuilderIcon fontSize="large" />123.45</p>
                         </div>
                 </div>
                 {/* <div className="card-title">Primary card title</div> */}
                 <div className="statistics-card-body">
                         <div className="card-body">
-                            <p className="card-text">123.45</p>
+                            <p className="statistic-text"><QueryBuilderIcon fontSize="large" />123.45</p>
                         </div>
                 </div>
             </section>
