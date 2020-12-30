@@ -120,7 +120,7 @@ export const FlightForm = (props) => {
                 <div className="form-group">
                     <label className="form-label" htmlFor="make_and_model">Make and Model:</label>
                     <input type="text" name="make_and_model" required className="form-control"
-                        placeholder="Make and Model"
+                        placeholder="Cessna 172"
                         defaultValue={flight.make_and_model}
                         onChange={handleControlledInputChange}
                     />
@@ -130,7 +130,7 @@ export const FlightForm = (props) => {
                 <div className="form-group">
                     <label className="form-label" htmlFor="aircraftId">Aircraft Id:</label>
                     <input type="text" name="aircraftId" required className="form-control"
-                        placeholder="aircraftId"
+                        placeholder="N189k"
                         defaultValue={flight.aircraftId}
                         onChange={handleControlledInputChange}
                     />
@@ -140,7 +140,7 @@ export const FlightForm = (props) => {
                 <div className="form-group">
                     <label className="form-label" htmlFor="fromAirport">From:</label>
                     <input type="text" name="fromAirport" required className="form-control"
-                        placeholder="From"
+                        placeholder="e.g. KBNA"
                         defaultValue={flight.fromAirport}
                         onChange={handleControlledInputChange}
                     />
@@ -174,7 +174,7 @@ export const FlightForm = (props) => {
                 <div className="form-group">
                     <label className="form-label" htmlFor="to">To:</label>
                     <input type="text" name="to" required className="form-control"
-                        placeholder="To"
+                        placeholder="e.g. KCLE"
                         defaultValue={flight.to}
                         onChange={handleControlledInputChange}
                     />
@@ -184,7 +184,7 @@ export const FlightForm = (props) => {
                 <div className="form-group">
                     <label className="form-label" htmlFor="landingsDay">Landings (day):</label>
                     <input type="number" name="landingsDay" required className="form-control"
-                        placeholder="Landings Day"
+                        placeholder="Number of landings during the day"
                         defaultValue={flight.landingsDay}
                         onChange={handleControlledInputChange}
                     />
@@ -194,7 +194,7 @@ export const FlightForm = (props) => {
                 <div className="form-group">
                     <label className="form-label" htmlFor="landingsNight">Landings (Night): </label>
                     <input type="number" name="landingsNight" required className="form-control"
-                        placeholder="Landings Night"
+                        placeholder="Number of landings at night"
                         defaultValue={flight.landingsNight}
                         onChange={handleControlledInputChange}
                     />
@@ -214,7 +214,7 @@ export const FlightForm = (props) => {
                 <div className="form-group">
                     <label className="form-label" htmlFor="type_and_location">Type and Location:</label>
                     <input type="text" name="type_and_location" required className="form-control"
-                        placeholder="Type and Location"
+                        placeholder="Instrument Approach Type and Location"
                         defaultValue={flight.type_and_location}
                         onChange={handleControlledInputChange}
                     />
@@ -235,9 +235,9 @@ export const FlightForm = (props) => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label className="form-label" htmlFor="airplane_single_multi_hours">Airplane Type Hours</label>
+                    <label className="form-label" htmlFor="airplane_single_multi_hours">Aircraft Type Hours:</label>
                     <input type="number" name="airplane_single_multi_hours" required className="form-control"
-                        placeholder="Multi / Single Hours"
+                        placeholder="Aircraft Type Hours"
                         defaultValue={flight.airplane_single_multi_hours}
                         onChange={handleControlledInputChange}
                     />
@@ -247,7 +247,7 @@ export const FlightForm = (props) => {
                 <div className="form-group">
                     <label className="form-label" htmlFor="instrumentActual">Instrument Actual:</label>
                     <input type="number" name="instrumentActual" required className="form-control"
-                        placeholder="Instrument Actual"
+                        placeholder="Instrument Actual Hours"
                         defaultValue={flight.instrumentActual}
                         onChange={handleControlledInputChange}
                     />
@@ -257,7 +257,7 @@ export const FlightForm = (props) => {
                 <div className="form-group">
                     <label className="form-label" htmlFor="simulator_hood">Simulator / Hood:</label>
                     <input type="number" name="simulator_hood" required className="form-control"
-                        placeholder="Simulator / Hood"
+                        placeholder="Simulator / Hood Hours"
                         defaultValue={flight.simulator_hood}
                         onChange={handleControlledInputChange}
                     />
@@ -267,7 +267,7 @@ export const FlightForm = (props) => {
                 <div className="form-group">
                     <label className="form-label" htmlFor="ftd_or_simulator">FTD or Simulator:</label>
                     <input type="number" name="ftd_or_simulator" required className="form-control"
-                        placeholder="FTD or Simulator"
+                        placeholder="FTD or Simulator Hours"
                         defaultValue={flight.ftd_or_simulator}
                         onChange={handleControlledInputChange}
                     />
@@ -277,7 +277,7 @@ export const FlightForm = (props) => {
                 <div className="form-group">
                     <label className="form-label" htmlFor="night">Night Hours:</label>
                     <input type="number" name="night" required className="form-control"
-                        placeholder="Night"
+                        placeholder="Night Hours"
                         defaultValue={flight.night}
                         onChange={handleControlledInputChange}
                     />
@@ -287,7 +287,7 @@ export const FlightForm = (props) => {
                 <div className="form-group">
                     <label className="form-label" htmlFor="cross_country_all">Cross Country (All):</label>
                     <input type="number" name="cross_country_all" required className="form-control"
-                        placeholder="Cross Country All"
+                        placeholder="Cross Country All Hours"
                         defaultValue={flight.cross_country_all}
                         onChange={handleControlledInputChange}
                     />
@@ -297,7 +297,7 @@ export const FlightForm = (props) => {
                 <div className="form-group">
                     <label className="form-label" htmlFor="cross_country_fivezero">Cross Country Over 50nm:</label>
                     <input type="number" name="cross_country_fivezero" required className="form-control"
-                        placeholder="Cross Country Over 50nm"
+                        placeholder="Cross Country Over 50nm Hours"
                         defaultValue={flight.cross_country_fivezero}
                         onChange={handleControlledInputChange}
                     />
@@ -307,7 +307,7 @@ export const FlightForm = (props) => {
                 <div className="form-group">
                     <label className="form-label" htmlFor="pilot_in_command">Pilot In Command:</label>
                     <input type="number" name="pilot_in_command" required className="form-control"
-                        placeholder="Pilot In Command"
+                        placeholder="Pilot In Command Hours"
                         defaultValue={flight.pilot_in_command}
                         onChange={handleControlledInputChange}
                     />
@@ -317,7 +317,7 @@ export const FlightForm = (props) => {
                 <div className="form-group">
                     <label className="form-label" htmlFor="solo">Solo:</label>
                     <input type="number" name="solo" required className="form-control"
-                        placeholder="Solo"
+                        placeholder="Solo Hours"
                         defaultValue={flight.solo}
                         onChange={handleControlledInputChange}
                     />
@@ -327,7 +327,7 @@ export const FlightForm = (props) => {
                 <div className="form-group">
                     <label className="form-label" htmlFor="ground_training">Ground Training:</label>
                     <input type="number" name="ground_training" required className="form-control"
-                        placeholder="Ground Training"
+                        placeholder="Ground Training Hours"
                         defaultValue={flight.ground_training}
                         onChange={handleControlledInputChange}
                     />
@@ -337,7 +337,7 @@ export const FlightForm = (props) => {
                 <div className="form-group">
                     <label className="form-label" htmlFor="flight_training_received">Flight Training Received:</label>
                     <input type="number" name="flight_training_received" required className="form-control"
-                        placeholder="Flight Training Received"
+                        placeholder="Flight Training Received Hours"
                         defaultValue={flight.flight_training_received}
                         onChange={handleControlledInputChange}
                     />
@@ -347,7 +347,7 @@ export const FlightForm = (props) => {
                 <div className="form-group">
                     <label className="form-label" htmlFor="flight_training_given">Flight Training Given</label>
                     <input type="number" name="flight_training_given" required className="form-control"
-                        placeholder="Flight Training Given"
+                        placeholder="Flight Training Given Hours"
                         defaultValue={flight.flight_training_given}
                         onChange={handleControlledInputChange}
                     />
@@ -357,7 +357,7 @@ export const FlightForm = (props) => {
                 <div className="form-group">
                     <label className="form-label" htmlFor="total_flight_time">Total Flight Time: </label>
                     <input type="number" name="total_flight_time" required className="form-control"
-                        placeholder="Total Flight Time"
+                        placeholder="Total Flight Time Hours"
                         defaultValue={flight.total_flight_time}
                         onChange={handleControlledInputChange}
                     />
