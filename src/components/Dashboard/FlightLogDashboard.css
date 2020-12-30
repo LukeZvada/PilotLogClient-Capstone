@@ -213,5 +213,6 @@
     flex-wrap: wrap;
     margin-left: 25rem;
     margin-bottom: 150px;
-    margin-top: 6rem;
+    opacity: .8;
+    color: white;
 }
