@@ -16,52 +16,53 @@ import { AirportInfoProvider } from "./AirportInformation/AirportInformationProv
 
 export const ApplicationViews = () => {
     return <>
+        <div className="page-content">
+            <FlightLogProvider>
+                <FlightLogUserProvider>
+                    <Route exact path="/dashboard" render={(props) => {
+                        return <> 
+                                        <FlightLogHeader history={props.history}/>
+                                        <FlightLogStatistics />
+                                        <FlightLogList history={props.history} />
+                                    </>
+                                }} />
+                    <Route exact path="/lognewflight" render={(props) => {
+                        return <> 
+                                        <FlightForm {...props}/>
+                                    </>
+                                }} />
+                    <Route exact path="/flightdetails/:flightId(\d+)" render={(props) => {
+                        return <> 
+                                        <FullFlightDetails {...props} />
+                                    </>
+                                }} />
+                    <Route path="/newlog/edit/:flightId(\d+)" render ={(props) => {
+                            return <FlightForm {...props}/>
+                        }}></Route>
+                </FlightLogUserProvider>
+            </FlightLogProvider>
 
-        <FlightLogProvider>
-            <FlightLogUserProvider>
-                <Route exact path="/dashboard" render={(props) => {
-                    return <> 
-                                    <FlightLogHeader history={props.history}/>
-                                    <FlightLogStatistics />
-                                    <FlightLogList history={props.history} />
-                                </>
-                            }} />
-                <Route exact path="/lognewflight" render={(props) => {
-                    return <> 
-                                    <FlightForm {...props}/>
-                                </>
-                            }} />
-                <Route exact path="/flightdetails/:flightId(\d+)" render={(props) => {
-                    return <> 
-                                    <FullFlightDetails {...props} />
-                                </>
-                            }} />
-                <Route path="/newlog/edit/:flightId(\d+)" render ={(props) => {
-                        return <FlightForm {...props}/>
-                    }}></Route>
-            </FlightLogUserProvider>
-        </FlightLogProvider>
+            <MetarProvider>
+                <Route exact path="/metars" render={(props) => {
+                                    return <> 
+                                        <MetarList history={props.history} />
+                                    </>
+                                }} />
+            </MetarProvider>
+            <AirportInfoProvider>
+                <Route exact path="/airportinformation" render={(props) => {
+                                    return <> 
+                                        <AirportInfoList history={props.history} />
+                                    </>
+                                }} />
+            </AirportInfoProvider>
 
-        <MetarProvider>
-            <Route exact path="/metars" render={(props) => {
-                                return <> 
-                                    <MetarList history={props.history} />
-                                </>
-                            }} />
-        </MetarProvider>
-        <AirportInfoProvider>
-            <Route exact path="/airportinformation" render={(props) => {
-                                return <> 
-                                    <AirportInfoList history={props.history} />
-                                </>
-                            }} />
-        </AirportInfoProvider>
-
-        <Route path="/logout" render={
-            (props) => {
-                localStorage.removeItem("pilotLogUser_id")
-                props.history.push("/login")
-            }
-        } />
+            <Route path="/logout" render={
+                (props) => {
+                    localStorage.removeItem("pilotLogUser_id")
+                    props.history.push("/login")
+                }
+            } />
+        </div>
     </>
 }

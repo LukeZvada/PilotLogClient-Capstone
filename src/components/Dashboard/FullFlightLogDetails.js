@@ -73,7 +73,7 @@ export const FullFlightDetails = (props) => {
                                 <Button className="delete_flight_button" variant="contained"
                                     onClick={
                                         () => delete_prompt(singleFlight.id)
-                                        .then(props.history.push('/dashboard'))
+                                        // .then(props.history.push('/dashboard'))
                                     }>
                                     Delete
                                 </Button>

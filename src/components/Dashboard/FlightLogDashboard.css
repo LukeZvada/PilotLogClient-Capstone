@@ -1,7 +1,6 @@
 .dashboard_Title { 
     display: flex;
     position: relative;
-    margin-left: 32rem;
     padding-top: 50px;
     color: white;
     width: 50%;
@@ -10,35 +9,27 @@
 .dashboard_Quote { 
     display: flex;
     position: relative;
-    margin-left: 32rem;
     padding-top: 10px;
     color: rgba(151, 151, 151, 1);
     width: 50%;
 }
 
 .flightlog_title {
-    display: flex;
-    position: relative;
-    margin-left: 32rem;
-    padding-top: 120px;
-    margin-bottom: -95px;
     color: rgba(83, 185, 234, 1);
-    width: 50%;
     letter-spacing: 4px;
     font-weight: 600;
 }
 
 .flightlog-card { 
     height: 65vh;
+    width: 80%;
+    max-width: 1720px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-left: 25rem;
     margin-bottom: 150px;
     overflow: scroll;
-    margin-top: 6rem;
-    /* align-content: center; */
 }
 
 .card-title { 
@@ -50,11 +41,8 @@
 }
 
 .card { 
-    width: 344px !important;
-    height: 300px;
-    margin-left: 90px;
     margin-top: 50px;
-    margin-right: 190px;
+    margin-right: 8em;
     background: linear-gradient(177.23deg, #2CDBF3 -13.49%, #3A49F9 109.75%);
     border-radius: 14px;
     color: white;
@@ -72,7 +60,6 @@
 .flightstatistics_title {
     display: flex;
     position: relative;
-    margin-left: 32rem;
     padding-top: 50px;
     margin-bottom: -95px;
     color: rgba(83, 185, 234, 1);
@@ -87,12 +74,11 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-content: center;
     padding-top: 7rem;
-    margin-left: 20rem;
     opacity: .9;
-    /* height: 4rem; */
+    margin-bottom: 4rem;
 }
 
 .statistics-card-body { 
@@ -101,6 +87,7 @@
     height: 74px;
     left: 360px;
     top: 180px;
+    margin-right: 4em;
     background: linear-gradient(135deg, rgba(64, 221, 255, 0.8) 0%, rgba(20, 186, 227, 0.8) 19.24%, rgba(19, 177, 230, 0.8) 68.64%, rgba(17, 170, 223, 0.8) 81.77%, rgba(11, 152, 197, 0.8) 100%);
 }
 
@@ -131,7 +118,6 @@
 .details_card { 
     min-width: 50rem;
     height: 62rem;
-    /* margin-left: 90px; */
     margin-top: 150px;
     margin-right: 290px;
     background: linear-gradient(177.23deg, #2CDBF3 -13.49%, #3A49F9 109.75%);
