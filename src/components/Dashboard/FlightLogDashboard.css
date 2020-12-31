@@ -49,8 +49,18 @@
     opacity: .8;
 }
 
-.card-body { 
+.card .card-body { 
     border-radius: 125px;
+}
+
+.card .card-body .top-card-section {
+    border-bottom: 3px yellow solid;
+    padding: 1em;
+}
+
+.card .card-body .bottom-card-section {
+    padding: 1em;
+    margin-top: 10px;
 }
 
 .flightsDetailsButton{ 

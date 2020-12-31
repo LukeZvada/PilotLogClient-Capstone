@@ -23,18 +23,21 @@ export const FlightLogList = (props) => {
                 userFlights.map(flight => {
                     return <div className="card">
                         <div className="card-body">
-                            <h5 className="card-title">{flight.to} &rarr; {flight.fromAirport}</h5>
-                            <h6 className="card-subtitle mb-2 text-muted log-date">{flight.date}</h6>
-                            <div className="divider">________________________________________</div>
-                            <p>Total Flight Time: {flight.total_flight_time} hours</p>
-                            <p>Total Landings: {flight.landingsDay}</p>
-                            <p>Make And Model: {flight.make_and_model}</p>
-                            <p>Aircraft Id: {flight.aircraftId}</p>
-                            <Button className="flightsDetailsButton" 
-                                    onClick={() => {
-                                            props.history.push(`/flightdetails/${flight.id}`)
-                                    }}>View Full Log
-                            </Button>
+                            <div className="top-card-section">
+                                <h5 className="card-title">{flight.to} &rarr; {flight.fromAirport}</h5>
+                                <h6 className="card-subtitle mb-2 text-muted log-date">{flight.date}</h6>
+                            </div>
+                            <div className="bottom-card-section">
+                                <p>Total Flight Time: {flight.total_flight_time} hours</p>
+                                <p>Total Landings: {flight.landingsDay}</p>
+                                <p>Make And Model: {flight.make_and_model}</p>
+                                <p>Aircraft Id: {flight.aircraftId}</p>
+                                <Button className="flightsDetailsButton" 
+                                        onClick={() => {
+                                                props.history.push(`/flightdetails/${flight.id}`)
+                                        }}>View Full Log
+                                </Button>
+                            </div>
                         </div>
                     </div>
                 })
