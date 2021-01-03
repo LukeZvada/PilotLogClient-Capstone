@@ -9,7 +9,7 @@ export const FlightLogProvider = (props) => {
 
 
     const getFlights = () => {
-        return fetch("http://localhost:8000/newlog", {
+        return fetch(`http://localhost:8000/newlog`, {
             headers:{
                 "Authorization": `Token ${localStorage.getItem("pilotLogUser_id")}`
             }})
