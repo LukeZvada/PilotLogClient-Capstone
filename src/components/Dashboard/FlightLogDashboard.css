@@ -250,3 +250,15 @@ p {
     display: flex;
     justify-content: center;
 }
+
+.statistics_title { 
+    color: white;
+    display: flex;
+    font-size: 14px;
+}
+
+.statistics-column { 
+    display: flex;
+    flex-direction: column;
+
+}

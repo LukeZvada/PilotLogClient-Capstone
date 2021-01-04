@@ -39,36 +39,46 @@ export const FlightLogStatistics = (props) => {
                 <div className="flightstatistics_title">FLIGHT STATISTICS</div>
             </article>
             <section className="statistics-card">
-                {/* <div class="card-title">Primary card title</div> */}
-                <div className="statistics-card-body">
-                        <div className="card-body">
-                            <p className="statistic-text"><FlightLandIcon fontSize="large"/> {totalLandingsDay}
-                            </p>
-                        </div>
+                <div className="statistics-column">
+                    <div class="statistics_title">Total Landings (Day)</div>
+                    <div className="statistics-card-body">
+                            <div className="card-body">
+                                <p className="statistic-text"><FlightLandIcon fontSize="large"/> {totalLandingsDay}
+                                </p>
+                            </div>
+                    </div>
                 </div>
-                {/* <div className="card-title">Primary card title</div> */}
-                <div className="statistics-card-body">
-                        <div className="card-body">
-                            <p className="statistic-text"><FlightLandIcon fontSize="large"/>{totalLandingsNight}</p>
-                        </div>
+                <div className="statistics-column">
+                    <div class="statistics_title">Total Landings (Night)</div>
+                    <div className="statistics-card-body">
+                            <div className="card-body">
+                                <p className="statistic-text"><FlightLandIcon fontSize="large"/>{totalLandingsNight}</p>
+                            </div>
+                    </div>
                 </div>
-                {/* <div className="card-title">Primary card title</div> */}
-                <div className="statistics-card-body">
-                        <div className="card-body">
-                            <p className="statistic-text"><CloudIcon fontSize="large" />{totalInstrumentApproaches}</p>
-                        </div>
+                <div className="statistics-column">
+                    <div class="statistics_title">Total Instrument Approaches</div>
+                    <div className="statistics-card-body">
+                            <div className="card-body">
+                                <p className="statistic-text"><CloudIcon fontSize="large" />{totalInstrumentApproaches}</p>
+                            </div>
+                    </div>
                 </div>
-                {/* <div className="card-title">Primary card title</div> */}
-                <div className="statistics-card-body">
-                        <div className="card-body">
-                            <p className="statistic-text"><QueryBuilderIcon fontSize="large" />{totalFlightTime}</p>
-                        </div>
+                <div className="statistics-column">
+                    <div class="statistics_title">Total Flight Time</div>
+                    <div className="statistics-card-body">
+                            <div className="card-body">
+                                <p className="statistic-text"><QueryBuilderIcon fontSize="large" />{totalFlightTime}</p>
+                            </div>
+                    </div>
                 </div>
-                {/* <div className="card-title">Primary card title</div> */}
-                <div className="statistics-card-body">
-                        <div className="card-body">
-                            <p className="statistic-text"><QueryBuilderIcon fontSize="large" />{totalTrainingReceived}</p>
-                        </div>
+                <div className="statistics-column">
+                    <div class="statistics_title">Total Training Time</div>
+                    <div className="statistics-card-body">
+                            <div className="card-body">
+                                <p className="statistic-text"><QueryBuilderIcon fontSize="large" />{totalTrainingReceived}</p>
+                            </div>
+                    </div>
                 </div>
             </section>
         </>
