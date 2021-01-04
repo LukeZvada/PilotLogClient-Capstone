@@ -135,6 +135,7 @@ export const FlightForm = (props) => {
     const handleShow = () => setShow(true);
 
     return (
+        <>
         <form className="new_flight_form">
             <article className="form_title">
                 <h2>LOG A FLIGHT</h2>
@@ -180,13 +181,13 @@ export const FlightForm = (props) => {
             </fieldset>
             <section>
                 {
-                    // inBetween ? 
-                    // <fieldset>
-                    //     <div className="form-group">
-                    //         <label className="form-label" htmlFor="inBetween">InBetween:</label>
-                    //     </div>
-                    // </fieldset>
-                    // : null
+                    inBetweens.length >= 1 ? 
+                    <fieldset>
+                        <div className="form-group">
+                            <label className="form-label" htmlFor="inBetween">InBetween: </label>
+                        </div>
+                    </fieldset>
+                    : null
                 }
                 <Button className="between_button" variant="secondary" onClick={handleShow}>
                     Add InBetween Stop
@@ -424,5 +425,6 @@ export const FlightForm = (props) => {
                 <Button className="cancelFlightButton" variant="contained" onClick={() => props.history.push(`/dashboard`)}>Cancel</Button>
             </section>
         </form>
+        </>
     )
 }
