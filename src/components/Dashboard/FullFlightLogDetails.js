@@ -14,6 +14,15 @@ export const FullFlightDetails = (props) => {
         getSingleFlight(currentFlightId)
     }, [])
 
+    const delete_prompt = (id) => {
+        var retVal = window.confirm("Are you sure you want to delete your comment?");
+            if( retVal == true ) {
+                deleteFlight(id)
+                return true;
+            } else {
+                return false;
+            }
+    }
 
 
     return (
@@ -55,19 +64,19 @@ export const FullFlightDetails = (props) => {
                                 <p>Remarks: {singleFlight.remarks}</p>
                             </div>
                             <div className="buttonColumn">
-                                <button className="edit_flight_button" 
+                                <Button className="edit_flight_button" 
                                     onClick={() => {
                                         props.history.push(`/newlog/edit/${singleFlight.id}`)
                                     }}>
                                     Edit Flight
-                                </button>
-                                <button className="delete_flight_button" variant="contained"
+                                </Button>
+                                <Button className="delete_flight_button" variant="contained"
                                     onClick={
-                                        () => deleteFlight(singleFlight.id)
-                                        .then(props.history.push('/dashboard'))
+                                        () => delete_prompt(singleFlight.id)
+                                        // .then(props.history.push('/dashboard'))
                                     }>
                                     Delete
-                                </button>
+                                </Button>
                             </div>
                         </div>
                     </section>

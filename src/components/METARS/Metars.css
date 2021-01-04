@@ -11,7 +11,6 @@ div#root {
     justify-content: center;
     min-width: 50rem;
     height: 20rem;
-    margin-left: 60rem;
     padding-top: 100px;
     /* margin-right: 290px; */
     background: linear-gradient(177.23deg, #2CDBF3 -13.49%, #3A49F9 109.75%);
@@ -26,11 +25,6 @@ div#root {
 .airport_search {
     width: 10rem;
     padding-top: 10rem;
-    margin-left: 30rem;
-}
-
-.metar_button{
-    margin-left: 30rem;
 }
 
 .metar_radio_1 { 

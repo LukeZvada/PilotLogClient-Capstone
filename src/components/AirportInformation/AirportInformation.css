@@ -29,7 +29,6 @@ div#root {
 .airport_search {
     width: 20rem;
     padding-top: 10rem;
-    margin-left: 30rem;
 }
 
 .search_title { 
@@ -37,7 +36,6 @@ div#root {
 }
 
 .metar_button{
-    margin-left: 30rem;
     background: linear-gradient(135deg, #40DDFF 0%, #14BAE3 19.24%, #13B1E6 68.64%, #11AADF 81.77%, #0B98C5 100%);
     border-radius: 10px;
     width: 299px;

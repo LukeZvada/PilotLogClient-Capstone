@@ -29,10 +29,8 @@ export const Register = (props) => {
                 "email": email.current.value,
                 "username": email.current.value,
                 "password": password.current.value,
-                "bio": "",
                 "active": true,
                 "created_on": now.toISODate(),
-                "profile_img": ""
             }
 
             return fetch("http://127.0.0.1:8000/register", {

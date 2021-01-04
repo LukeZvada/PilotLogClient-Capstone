@@ -10,7 +10,11 @@ export const FlightForm = (props) => {
     const { addFlight, getFlights, flights, editFlight } = useContext(FlightLogContext)
     const [flight, setFlight] = useState({})
     const [show, setShow] = useState(false);
+    const [currentInBetween, setCurrentInBetween] = useState({})
+    let [inBetweens, setInBetweens] = useState([]);
 
+    console.log(inBetweens)
+    console.log(flight)
     const editMode = props.match.params.hasOwnProperty("flightId")
 
     const handleControlledInputChange = (event) => {
@@ -19,6 +23,22 @@ export const FlightForm = (props) => {
         setFlight(newFlight)
     }
 
+    const handleModalInputChange = (event) => {
+        const newInBetween = Object.assign({}, currentInBetween)
+        newInBetween['airport'] = event.target.value
+        setCurrentInBetween(newInBetween)
+    }
+
+    const handleSaveInBetween = () => {
+        setInBetweens(inBetweens.concat(currentInBetween))
+        
+        const newFlight = Object.assign({}, flight)
+        newFlight["in_betweens"] = inBetweens
+
+
+        setFlight(newFlight)
+        handleClose()
+    }
 
     const getFlightInEditMode = () => {
         if (editMode) {
@@ -30,11 +50,11 @@ export const FlightForm = (props) => {
 
     useEffect(() => {
         getFlights()
-    }, [])
+    }, [inBetweens])
 
     useEffect(() => {
         getFlightInEditMode()
-    }, [flights])
+    }, [flights, inBetweens])
 
     const constructNewFlight = () => {
 
@@ -64,8 +84,8 @@ export const FlightForm = (props) => {
                     flight_training_received: parseInt(flight.flight_training_received),
                     flight_training_given: parseInt(flight.flight_training_given),
                     total_flight_time: parseInt(flight.total_flight_time),
-                    remarks: flight.remarks
-                    // userId: parseInt(localStorage.getItem("pilotLogUser_Id"))
+                    remarks: flight.remarks,
+                    in_betweens: flight.in_betweens
                 })
                     .then(() => props.history.push("/dashboard"))
             } else {
@@ -94,17 +114,23 @@ export const FlightForm = (props) => {
                     flight_training_received: parseInt(flight.flight_training_received),
                     flight_training_given: parseInt(flight.flight_training_given),
                     total_flight_time: parseInt(flight.total_flight_time),
-                    remarks: flight.remarks
-                    // userId: parseInt(localStorage.getItem("pilotLogUser_Id"))
+                    remarks: flight.remarks,
+                    in_betweens: flight.in_betweens
                 })
                     .then(() => props.history.push("/dashboard"))
             }
     }
 
-    const handleClose = () => setShow(false);
+    const handleClose = () => {
+        setShow(false)
+    }
+
+    
+    
     const handleShow = () => setShow(true);
 
     return (
+        <>
         <form className="new_flight_form">
             <article className="form_title">
                 <h2>LOG A FLIGHT</h2>
@@ -148,7 +174,23 @@ export const FlightForm = (props) => {
                     />
                 </div>
             </fieldset>
-            <section>
+            <section key={flight.id}>
+                {
+                    inBetweens.length >= 1 ? 
+                        <div className="form-group">
+                            <label className="form-label" htmlFor="in_betweens">InBetween: </label>
+                            <div>
+                                {
+                                    flight.in_betweens.map(ib => {
+                                        return <section key={ib.id}>
+                                            <div className="in-between-airport">{ib.airport}</div>
+                                        </section>
+                                    })
+                                }
+                            </div>
+                        </div>
+                    : null
+                }
                 <Button className="between_button" variant="secondary" onClick={handleShow}>
                     Add InBetween Stop
                 </Button>
@@ -159,14 +201,13 @@ export const FlightForm = (props) => {
                     </Modal.Header>
                     <Modal.Body><input type="text" name="inbetween" required className="form-control"
                         placeholder="InBetween Stop"
-                        defaultValue={flight.InBetween}
-                        onChange={handleControlledInputChange}
+                        onChange={handleModalInputChange}
                     /></Modal.Body>
                     <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
                         Close
                     </Button>
-                    <Button variant="contained" onClick={handleClose}>
+                    <Button variant="contained" onClick={handleSaveInBetween}>
                         Save Changes
                     </Button>
                     </Modal.Footer>
@@ -386,5 +427,6 @@ export const FlightForm = (props) => {
                 <Button className="cancelFlightButton" variant="contained" onClick={() => props.history.push(`/dashboard`)}>Cancel</Button>
             </section>
         </form>
+        </>
     )
 }
