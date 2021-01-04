@@ -11,8 +11,10 @@ export const FlightForm = (props) => {
     const [flight, setFlight] = useState({})
     const [show, setShow] = useState(false);
     const [currentInBetween, setCurrentInBetween] = useState({})
-    const [inBetweens, setInBetweens] = useState([]);
+    let [inBetweens, setInBetweens] = useState([]);
 
+    console.log(inBetweens)
+    console.log(flight)
     const editMode = props.match.params.hasOwnProperty("flightId")
 
     const handleControlledInputChange = (event) => {
@@ -23,19 +25,17 @@ export const FlightForm = (props) => {
 
     const handleModalInputChange = (event) => {
         const newInBetween = Object.assign({}, currentInBetween)
-        newInBetween[event.target.value] = event.target.value
+        newInBetween['airport'] = event.target.value
         setCurrentInBetween(newInBetween)
     }
 
     const handleSaveInBetween = () => {
         setInBetweens(inBetweens.concat(currentInBetween))
-        console.log("inBetweens", currentInBetween)
         
         const newFlight = Object.assign({}, flight)
-        newFlight["in_betweens"] = currentInBetween
-        
-        console.log("inbetween", currentInBetween)
-        
+        newFlight["in_betweens"] = inBetweens
+
+
         setFlight(newFlight)
         handleClose()
     }
@@ -49,18 +49,12 @@ export const FlightForm = (props) => {
     }
 
     useEffect(() => {
-    }, [currentInBetween])
-    
-    useEffect(() => {
+        getFlights()
     }, [inBetweens])
 
     useEffect(() => {
-        getFlights()
-    }, [])
-
-    useEffect(() => {
         getFlightInEditMode()
-    }, [flights])
+    }, [flights, inBetweens])
 
     const constructNewFlight = () => {
 
@@ -180,18 +174,20 @@ export const FlightForm = (props) => {
                     />
                 </div>
             </fieldset>
-            <section>
+            <section key={flight.id}>
                 {
                     inBetweens.length >= 1 ? 
                         <div className="form-group">
                             <label className="form-label" htmlFor="in_betweens">InBetween: </label>
-                        {
-                            inBetweens.map(ib => {
-                                return <section key={ib.id} className="in-between-list">
-                                            <div>{ib.in_betweens}</div>
+                            <div>
+                                {
+                                    flight.in_betweens.map(ib => {
+                                        return <section key={ib.id}>
+                                            <div className="in-between-airport">{ib.airport}</div>
                                         </section>
-                            })
-                        }
+                                    })
+                                }
+                            </div>
                         </div>
                     : null
                 }
