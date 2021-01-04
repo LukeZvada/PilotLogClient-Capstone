@@ -23,15 +23,19 @@ export const FlightForm = (props) => {
 
     const handleModalInputChange = (event) => {
         const newInBetween = Object.assign({}, currentInBetween)
-        newInBetween[event.target.name] = event.target.value
+        newInBetween[event.target.value] = event.target.value
         setCurrentInBetween(newInBetween)
     }
 
     const handleSaveInBetween = () => {
         setInBetweens(inBetweens.concat(currentInBetween))
-
+        console.log("inBetweens", currentInBetween)
+        
         const newFlight = Object.assign({}, flight)
-        newFlight["in_betweens"] = inBetweens
+        newFlight["in_betweens"] = currentInBetween
+        
+        console.log("inbetween", currentInBetween)
+        
         setFlight(newFlight)
         handleClose()
     }
@@ -43,6 +47,12 @@ export const FlightForm = (props) => {
             setFlight(selectedFlight)
         }
     }
+
+    useEffect(() => {
+    }, [currentInBetween])
+    
+    useEffect(() => {
+    }, [inBetweens])
 
     useEffect(() => {
         getFlights()
@@ -82,7 +92,6 @@ export const FlightForm = (props) => {
                     total_flight_time: parseInt(flight.total_flight_time),
                     remarks: flight.remarks,
                     in_betweens: flight.in_betweens
-                    // userId: parseInt(localStorage.getItem("pilotLogUser_Id"))
                 })
                     .then(() => props.history.push("/dashboard"))
             } else {
@@ -113,7 +122,6 @@ export const FlightForm = (props) => {
                     total_flight_time: parseInt(flight.total_flight_time),
                     remarks: flight.remarks,
                     in_betweens: flight.in_betweens
-                    // userId: parseInt(localStorage.getItem("pilotLogUser_Id"))
                 })
                     .then(() => props.history.push("/dashboard"))
             }
