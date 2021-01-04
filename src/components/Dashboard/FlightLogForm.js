@@ -130,6 +130,7 @@ export const FlightForm = (props) => {
     const handleClose = () => {
         setShow(false)
     }
+
     
     
     const handleShow = () => setShow(true);
@@ -182,11 +183,16 @@ export const FlightForm = (props) => {
             <section>
                 {
                     inBetweens.length >= 1 ? 
-                    <fieldset>
                         <div className="form-group">
-                            <label className="form-label" htmlFor="inBetween">InBetween: </label>
+                            <label className="form-label" htmlFor="in_betweens">InBetween: </label>
+                        {
+                            inBetweens.map(ib => {
+                                return <section key={ib.id} className="in-between-list">
+                                            <div>{ib.in_betweens}</div>
+                                        </section>
+                            })
+                        }
                         </div>
-                    </fieldset>
                     : null
                 }
                 <Button className="between_button" variant="secondary" onClick={handleShow}>
