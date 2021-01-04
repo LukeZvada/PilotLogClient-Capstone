@@ -10,6 +10,8 @@ export const FlightForm = (props) => {
     const { addFlight, getFlights, flights, editFlight } = useContext(FlightLogContext)
     const [flight, setFlight] = useState({})
     const [show, setShow] = useState(false);
+    const [currentInBetween, setCurrentInBetween] = useState({})
+    const [inBetweens, setInBetweens] = useState([]);
 
     const editMode = props.match.params.hasOwnProperty("flightId")
 
@@ -19,6 +21,20 @@ export const FlightForm = (props) => {
         setFlight(newFlight)
     }
 
+    const handleModalInputChange = (event) => {
+        const newInBetween = Object.assign({}, currentInBetween)
+        newInBetween[event.target.name] = event.target.value
+        setCurrentInBetween(newInBetween)
+    }
+
+    const handleSaveInBetween = () => {
+        setInBetweens(inBetweens.concat(currentInBetween))
+
+        const newFlight = Object.assign({}, flight)
+        newFlight["in_betweens"] = inBetweens
+        setFlight(newFlight)
+        handleClose()
+    }
 
     const getFlightInEditMode = () => {
         if (editMode) {
@@ -64,7 +80,8 @@ export const FlightForm = (props) => {
                     flight_training_received: parseInt(flight.flight_training_received),
                     flight_training_given: parseInt(flight.flight_training_given),
                     total_flight_time: parseInt(flight.total_flight_time),
-                    remarks: flight.remarks
+                    remarks: flight.remarks,
+                    in_betweens: flight.in_betweens
                     // userId: parseInt(localStorage.getItem("pilotLogUser_Id"))
                 })
                     .then(() => props.history.push("/dashboard"))
@@ -94,14 +111,19 @@ export const FlightForm = (props) => {
                     flight_training_received: parseInt(flight.flight_training_received),
                     flight_training_given: parseInt(flight.flight_training_given),
                     total_flight_time: parseInt(flight.total_flight_time),
-                    remarks: flight.remarks
+                    remarks: flight.remarks,
+                    in_betweens: flight.in_betweens
                     // userId: parseInt(localStorage.getItem("pilotLogUser_Id"))
                 })
                     .then(() => props.history.push("/dashboard"))
             }
     }
 
-    const handleClose = () => setShow(false);
+    const handleClose = () => {
+        setShow(false)
+    }
+    
+    
     const handleShow = () => setShow(true);
 
     return (
@@ -149,6 +171,15 @@ export const FlightForm = (props) => {
                 </div>
             </fieldset>
             <section>
+                {
+                    // inBetween ? 
+                    // <fieldset>
+                    //     <div className="form-group">
+                    //         <label className="form-label" htmlFor="inBetween">InBetween:</label>
+                    //     </div>
+                    // </fieldset>
+                    // : null
+                }
                 <Button className="between_button" variant="secondary" onClick={handleShow}>
                     Add InBetween Stop
                 </Button>
@@ -159,14 +190,13 @@ export const FlightForm = (props) => {
                     </Modal.Header>
                     <Modal.Body><input type="text" name="inbetween" required className="form-control"
                         placeholder="InBetween Stop"
-                        defaultValue={flight.InBetween}
-                        onChange={handleControlledInputChange}
+                        onChange={handleModalInputChange}
                     /></Modal.Body>
                     <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
                         Close
                     </Button>
-                    <Button variant="contained" onClick={handleClose}>
+                    <Button variant="contained" onClick={handleSaveInBetween}>
                         Save Changes
                     </Button>
                     </Modal.Footer>
