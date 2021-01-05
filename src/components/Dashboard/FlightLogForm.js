@@ -22,12 +22,16 @@ export const FlightForm = (props) => {
     }
 
     const handleModalInputChange = (event) => {
+        //This is handling the keydown change to the input in the modal
         const newInBetween = event.target.value
+        //This is setting the currentInBetween state with the current value of the input field in the modal 
         setCurrentInBetween(newInBetween)
     }
 
     const handleSaveInBetween = () => {
+        //when save is clicked, this updates the inBetween state to add the most recently entered value of the modal. 
         setInBetweens(inBetweens.concat(currentInBetween))
+        //closes modal
         handleClose()
     }
 
@@ -45,10 +49,14 @@ export const FlightForm = (props) => {
     }, [])
 
     useEffect(() => {
+        //Once latest inBetweens state is saved, I used the updated state to update the state of the flight 
+        //current state of flight
         const newFlight = Object.assign({}, flight)
+        //updating flight with new list of inbewteens 
         newFlight["in_betweens"] = inBetweens
+        //updating the state entire flight
         setFlight(newFlight)
-    }, [inBetweens])
+    }, [inBetweens]) //watching for state change
 
     useEffect(() => {
         getFlightInEditMode()
