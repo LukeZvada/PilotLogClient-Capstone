@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState, useRef } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import { FlightLogContext } from "./FlightLogProvider"
 import "./FlightLogDashboard.css"
 import Button from '@material-ui/core/Button';
@@ -9,12 +9,10 @@ import Modal from 'react-bootstrap/Modal'
 export const FlightForm = (props) => {
     const { addFlight, getFlights, flights, editFlight } = useContext(FlightLogContext)
     const [flight, setFlight] = useState({})
-    const [show, setShow] = useState(false);
+    const [show, setShow] = useState(false)
     const [currentInBetween, setCurrentInBetween] = useState({})
-    let [inBetweens, setInBetweens] = useState([]);
+    const [inBetweens, setInBetweens] = useState([])
 
-    console.log(inBetweens)
-    console.log(flight)
     const editMode = props.match.params.hasOwnProperty("flightId")
 
     const handleControlledInputChange = (event) => {
@@ -24,19 +22,16 @@ export const FlightForm = (props) => {
     }
 
     const handleModalInputChange = (event) => {
-        const newInBetween = Object.assign({}, currentInBetween)
-        newInBetween['airport'] = event.target.value
+        //This is handling the keydown change to the input in the modal
+        const newInBetween = event.target.value
+        //This is setting the currentInBetween state with the current value of the input field in the modal 
         setCurrentInBetween(newInBetween)
     }
 
     const handleSaveInBetween = () => {
+        //when save is clicked, this updates the inBetween state to add the most recently entered value of the modal. 
         setInBetweens(inBetweens.concat(currentInBetween))
-        
-        const newFlight = Object.assign({}, flight)
-        newFlight["in_betweens"] = inBetweens
-
-
-        setFlight(newFlight)
+        //closes modal
         handleClose()
     }
 
@@ -48,13 +43,24 @@ export const FlightForm = (props) => {
         }
     }
 
+        
     useEffect(() => {
         getFlights()
-    }, [inBetweens])
+    }, [])
+
+    useEffect(() => {
+        //Once latest inBetweens state is saved, I used the updated state to update the state of the flight 
+        //current state of flight
+        const newFlight = Object.assign({}, flight)
+        //updating flight with new list of inbewteens 
+        newFlight["in_betweens"] = inBetweens
+        //updating the state entire flight
+        setFlight(newFlight)
+    }, [inBetweens]) //watching for state change
 
     useEffect(() => {
         getFlightInEditMode()
-    }, [flights, inBetweens])
+    }, [flights])
 
     const constructNewFlight = () => {
 
@@ -121,12 +127,7 @@ export const FlightForm = (props) => {
             }
     }
 
-    const handleClose = () => {
-        setShow(false)
-    }
-
-    
-    
+    const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
     return (
@@ -181,9 +182,9 @@ export const FlightForm = (props) => {
                             <label className="form-label" htmlFor="in_betweens">InBetween: </label>
                             <div>
                                 {
-                                    flight.in_betweens.map(ib => {
-                                        return <section key={ib.id}>
-                                            <div className="in-between-airport">{ib.airport}</div>
+                                    inBetweens.map(airport => {
+                                        return <section key={airport}>
+                                            <div className="in-between-airport">{airport}</div>
                                         </section>
                                     })
                                 }
@@ -199,7 +200,7 @@ export const FlightForm = (props) => {
                     <Modal.Header>
                     <Modal.Title>Add InBewteen Stop</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body><input type="text" name="inbetween" required className="form-control"
+                    <Modal.Body><input id="inBetweenInput" type="text" name="inbetween" required className="form-control"
                         placeholder="InBetween Stop"
                         onChange={handleModalInputChange}
                     /></Modal.Body>
