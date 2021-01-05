@@ -179,7 +179,7 @@ export const FlightForm = (props) => {
                 {
                     inBetweens.length >= 1 ? 
                         <div className="form-group">
-                            <label className="form-label" htmlFor="in_betweens">InBetween: </label>
+                            <label className="form-label inbetween" htmlFor="in_betweens">InBetween: </label>
                             <div>
                                 {
                                     inBetweens.map(airport => {

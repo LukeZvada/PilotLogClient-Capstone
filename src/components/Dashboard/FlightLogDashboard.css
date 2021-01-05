@@ -265,4 +265,10 @@ p {
 
 .in-between-airport { 
     color: white;
+    margin-left: 7rem;
+}
+
+.inbetween { 
+    color: white;
+    margin-left: -12rem;
 }
