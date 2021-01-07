@@ -44,6 +44,12 @@ fieldset {
 
 .container--login {
     text-align: center;
+    height: 100vh;
+    background-image: url("../Images/Night-Landing1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: .9;
 }
 
 .form--login {
