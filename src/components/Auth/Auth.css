@@ -74,11 +74,11 @@ input.login-input {
 .form-background{
     display: flex;
     justify-content: space-evenly;
-    margin-left: 65rem;
-    background-color: rgba(111, 108, 153, 0.4);
+    margin-left: 70rem;
+    background-color: rgba(111, 108, 153, 0.521);
     margin-right: 65rem;
-    margin-top: 15rem;
-    width: 400px;
+    margin-top: 20rem;
+    width: 450px;
     height: 400px;
     position: fixed;
     border-radius: 24px;
@@ -92,6 +92,13 @@ input.login-input {
     letter-spacing: 5px;
 }
 
+input.email.login-input {
+    background-color: rgba(111, 108, 153, 0.7) !important;
+}
+input.password.login-input {
+    background-color: rgba(111, 108, 153, 0.7) !important;
+}
+
 .button-fieldset {
     display: flex;
     justify-content: flex-end;
@@ -100,7 +107,7 @@ input.login-input {
 
 .login-button {
     /* background: linear-gradient(135deg, #40DDFF 0%, #14BAE3 19.24%, #13B1E6 68.64%, #11AADF 81.77%, #0B98C5 100%); */
-    background: transparent;
+    background-color: rgba(111, 108, 153, 0.7) !important;
     border: 1px solid rgba(83, 185, 234, 1) !important;
     border-radius: 10px;
     width: 109px;
@@ -131,8 +138,13 @@ input.login-input {
 
 .register-button {
     font-size: 15px !important;
+    display: flex;
+    justify-content: flex-end;
+    color: rgba(83, 185, 234, 1) !important;
+    margin-right: 15px;
 }
 
-a.register-button{
+a{
     color: rgba(83, 185, 234, 1) !important;
+    box-shadow: #40DDFF;
 }
