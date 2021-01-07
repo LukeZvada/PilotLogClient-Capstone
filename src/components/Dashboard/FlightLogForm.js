@@ -175,7 +175,7 @@ export const FlightForm = (props) => {
                     />
                 </div>
             </fieldset>
-            <section key={flight.id}>
+            <section className="inbetween-button" key={flight.id}>
                 {
                     inBetweens.length >= 1 ? 
                         <div className="form-group">
@@ -198,17 +198,17 @@ export const FlightForm = (props) => {
 
                 <Modal show={show} onHide={handleClose}>
                     <Modal.Header>
-                    <Modal.Title>Add InBewteen Stop</Modal.Title>
+                    <Modal.Title>Add Stop</Modal.Title>
                     </Modal.Header>
                     <Modal.Body><input id="inBetweenInput" type="text" name="inbetween" required className="form-control"
                         placeholder="InBetween Stop"
                         onChange={handleModalInputChange}
                     /></Modal.Body>
                     <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
+                    <Button className="modal-close" variant="secondary" onClick={handleClose}>
                         Close
                     </Button>
-                    <Button variant="contained" onClick={handleSaveInBetween}>
+                    <Button className="modal-save" variant="contained" onClick={handleSaveInBetween}>
                         Save Changes
                     </Button>
                     </Modal.Footer>

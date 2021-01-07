@@ -119,6 +119,7 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+    margin-right: 18rem;
 }
 
 .radio {
@@ -272,4 +273,31 @@ p {
 .inbetween { 
     color: white;
     margin-left: -12rem;
+}
+
+.inbetween-button:before {
+    margin-left: 12rem;
+}
+
+.modal-content {
+    background: radial-gradient(123.22% 129.67% at 100.89% -5.6%, #3C5E91 16.67%, #17153A 63.02%) !important;
+    color: white;
+    border-radius: 24px;
+    margin-top: 20rem !important;
+}
+
+.modal-header {
+    border: none !important;
+}
+.modal-footer {
+    border: none !important;
+}
+
+.modal-close {
+    color: rgba(83, 185, 234, 1) !important;
+}
+
+.modal-save {
+    background: linear-gradient(135deg, #40DDFF 0%, #14BAE3 19.24%, #13B1E6 68.64%, #11AADF 81.77%, #0B98C5 100%) !important;
+    color: white !important;
 }

@@ -3,7 +3,7 @@
         position: fixed;
         left: 0;
         height: 100%;
-        width: 20em;
+        width: 23em;
         padding: 4em 3em;
         flex-direction: column;
         display: flex;
@@ -42,6 +42,8 @@
 
     .navbar-light .navbar-nav .nav-link { 
         color:rgb(142, 142, 142);
+        font-size: 18px;
+        letter-spacing: 2.5px;
         text-decoration: none;
         padding: 2rem;
     }
