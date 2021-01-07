@@ -9,23 +9,25 @@ fieldset {
     border: 0;
 }
 
-.form--login {
-    display: inline-block;
-    margin: 0 auto;
-    text-align: left;
-}
+input.form-control {
+    background-color: black;
+    color: white;
+    border-radius: 25px;
+    border-color: #3C5E91;
+    text-align: center;
+  }
 
-.form--login > fieldset > input[type="email"],
+/* .form--login > fieldset > input[type="email"],
 .form--login > fieldset > input[type="password"] {
     width: 25em;
-}
+} */
 
 .label--login {
     width: 8rem;
     display: inline-block;
 }
 
-.form-control {
+/* .form-control {
     display: block;
     width: 94%;
     height: calc(1.5em + .75rem + 2px);
@@ -40,7 +42,7 @@ fieldset {
     border-radius: .25rem;
     -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
+} */
 
 .container--login {
     text-align: center;
@@ -53,13 +55,26 @@ fieldset {
 }
 
 .form--login {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     z-index: 1;
-    min-height: 25rem;
-    min-width: 45rem;
-    padding: 0 5rem;
-    background-color: hsla(0,0%,100%,0.75);
-    background-blend-mode: overlay;
-    background-repeat: no-repeat;
+    /* padding-top: 15rem; */
+    margin-top: 15rem;
+    width: 27rem;
+    max-height: 40rem;
+    border-radius: 28px;
+    margin: 0 auto;
+    text-align: center;
+}
+.form-background{
+    display: flex;
+    margin-left: 65rem;
+    background-color: rgba(111, 108, 153, 0.4);
+    margin-right: 65rem;
+    margin-top: 15rem;
+    position: fixed;
+    border-radius: 24px;
 }
 
 .button--close {
