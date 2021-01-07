@@ -56,7 +56,7 @@ export const FlightForm = (props) => {
         newFlight["in_betweens"] = inBetweens
         //updating the state entire flight
         setFlight(newFlight)
-    }, [inBetweens]) //watching for state change
+    }, [inBetweens]) //watching for state change depened
 
     useEffect(() => {
         getFlightInEditMode()

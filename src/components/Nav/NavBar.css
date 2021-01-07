@@ -56,6 +56,16 @@
 }
 
 
+.navbar-brand { 
+    display: flex; 
+    flex-direction: row;
+    font-size: 25px;
+    transition: all .2s ease-in-out;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.1);
+}
 
 .navbarColumn {
     display: block;

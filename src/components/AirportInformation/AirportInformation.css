@@ -19,6 +19,7 @@ div#root {
     height: 325px;
     left: 440px;
     opacity: 0.85;
+    justify-content: space-between;
 }
 
 .airportInfo_container { 
