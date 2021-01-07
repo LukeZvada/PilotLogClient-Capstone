@@ -9,13 +9,15 @@ fieldset {
     border: 0;
 }
 
-input.form-control {
-    background-color: black;
+input.login-input {
+    background-color: transparent;
     color: white;
+    width: 188px;
+    height: 40px;
     border-radius: 25px;
-    border-color: #3C5E91;
+    border-color: rgba(83, 185, 234, 1);
     text-align: center;
-  }
+}
 
 /* .form--login > fieldset > input[type="email"],
 .form--login > fieldset > input[type="password"] {
@@ -66,13 +68,18 @@ input.form-control {
     border-radius: 28px;
     margin: 0 auto;
     text-align: center;
+    color: rgba(83, 185, 234, 1);
+    font-size: 25px;
 }
 .form-background{
     display: flex;
+    justify-content: space-evenly;
     margin-left: 65rem;
     background-color: rgba(111, 108, 153, 0.4);
     margin-right: 65rem;
     margin-top: 15rem;
+    width: 400px;
+    height: 400px;
     position: fixed;
     border-radius: 24px;
 }
