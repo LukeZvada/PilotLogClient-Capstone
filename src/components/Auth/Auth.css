@@ -144,7 +144,7 @@ input.password.login-input {
     margin-right: 15px;
 }
 
-a{
+a.register-button{
     color: rgba(83, 185, 234, 1) !important;
     box-shadow: #40DDFF;
 }

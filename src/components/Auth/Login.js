@@ -62,7 +62,7 @@ export const Login = () => {
                         <Button className="login-button" type="submit">Login</Button>
                     </fieldset>
                     <div className="register-button">
-                        <Link to="/register">New Here? Register</Link>
+                        <Link className="register-button" to="/register">New Here? Register</Link>
                     </div>
                 </form>
             </section>
