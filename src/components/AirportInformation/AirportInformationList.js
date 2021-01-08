@@ -32,24 +32,24 @@ export const AirportInfoList = (props) => {
                                     <h1 className="card-title-airportInfo">{
                                         airportInfo.name}</h1>
                                     <div className="airport_location">
-                                        <span>Location:</span> 
-                                        <span>{airportInfo.city}, {airportInfo.state}</span>
+                                        <span className="airportspan">Location: </span> 
+                                        <span className="airportspan">{airportInfo.city}, {airportInfo.state}</span>
                                     </div> 
                                     <div className="airport_icao">
-                                        <span>ICAO:</span> 
-                                        <span>{airportInfo.icao}</span>
+                                        <span className="airportspan">ICAO: </span> 
+                                        <span className="airportspan">{airportInfo.icao}</span>
                                     </div> 
                                     <div className="airport_elevation">
-                                        <span>Elevation:</span> 
-                                        <span>{airportInfo.elevation_ft}ft</span>
+                                        <span className="airportspan">Elevation: </span> 
+                                        <span className="airportspan">{airportInfo.elevation_ft}ft</span>
                                     </div> 
                                     <div className="airport_type">
-                                        <span>Airport Type:</span> 
-                                        <span>{airportInfo.type}</span>
+                                        <span className="airportspan">Airport Type: </span> 
+                                        <span className="airportspan">{airportInfo.type}</span>
                                     </div> 
                                     <div className="airport_moreInfo">
-                                        <span>More Info:</span> 
-                                        <span>{airportInfo.wiki}</span>
+                                        <span className="airportspan">More Info: </span> 
+                                        <span className="airportspan">{airportInfo.wiki}"</span>
                                     </div>
                             </div>
                         </div>

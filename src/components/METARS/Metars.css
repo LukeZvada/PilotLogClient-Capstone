@@ -11,11 +11,15 @@ div#root {
     justify-content: center;
     min-width: 50rem;
     height: 20rem;
-    padding-top: 100px;
-    /* margin-right: 290px; */
     background: linear-gradient(177.23deg, #2CDBF3 -13.49%, #3A49F9 109.75%);
     border-radius: 14px;
     color: white;
+    font-size: 28px;
+    margin-left: 30rem;
+}
+
+.metars_card .card-body {
+    margin: 1.5rem 3rem;
 }
 
 .metar_container { 
@@ -43,4 +47,17 @@ div#root {
     align-items: center;
     display: flex;
     justify-content: center;
+}
+
+.metar-title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+    letter-spacing: 2px;
+    font-weight: 350;
+}
+
+.card-title-metarInfo {
+    font-size: 25px;
+    font-weight: 200;
 }

@@ -9,23 +9,27 @@ fieldset {
     border: 0;
 }
 
-.form--login {
-    display: inline-block;
-    margin: 0 auto;
-    text-align: left;
+input.login-input {
+    background-color: transparent;
+    color: white;
+    height: 60px;
+    border-radius: 20px;
+    border-color: rgba(83, 185, 234, 1);
+    text-align: center;
+    font-size: 20px !important;
 }
 
-.form--login > fieldset > input[type="email"],
+/* .form--login > fieldset > input[type="email"],
 .form--login > fieldset > input[type="password"] {
     width: 25em;
-}
+} */
 
 .label--login {
     width: 8rem;
     display: inline-block;
 }
 
-.form-control {
+/* .form-control {
     display: block;
     width: 94%;
     height: calc(1.5em + .75rem + 2px);
@@ -40,20 +44,86 @@ fieldset {
     border-radius: .25rem;
     -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
+} */
 
 .container--login {
     text-align: center;
+    height: 100vh;
+    background-image: url("../Images/Night-Landing1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: .9;
 }
 
 .form--login {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     z-index: 1;
-    min-height: 25rem;
-    min-width: 45rem;
-    padding: 0 5rem;
-    background-color: hsla(0,0%,100%,0.75);
-    background-blend-mode: overlay;
-    background-repeat: no-repeat;
+    /* padding-top: 15rem; */
+    margin-top: 15rem;
+    width: 27rem;
+    max-height: 40rem;
+    border-radius: 28px;
+    margin: 0 auto;
+    text-align: center;
+    color: rgba(83, 185, 234, 1);
+    
+}
+.form-background{
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 70rem;
+    background-color: rgba(111, 108, 153, 0.7);
+    margin-right: 65rem;
+    margin-top: 20rem;
+    width: 450px;
+    height: 400px;
+    position: fixed;
+    border-radius: 24px;
+}
+
+.email-fieldset { 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 25px;
+    letter-spacing: 5px;
+}
+
+input.email.login-input {
+    background-color: rgba(111, 108, 153, 0.7) !important;
+}
+input.password.login-input {
+    background-color: rgba(111, 108, 153, 0.7) !important;
+}
+
+.button-fieldset {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 15px;
+}
+
+.login-button {
+    /* background: linear-gradient(135deg, #40DDFF 0%, #14BAE3 19.24%, #13B1E6 68.64%, #11AADF 81.77%, #0B98C5 100%); */
+    background-color: rgba(111, 108, 153, 0.7) !important;
+    border: 1px solid rgba(83, 185, 234, 1) !important;
+    border-radius: 10px;
+    width: 109px;
+    height: 42px;
+    color: rgba(255, 255, 255, 1) !important;
+    font-weight: bold;
+    text-align: right;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    font-size: 18px !important;
+    letter-spacing: 2px !important;
+}
+
+.login-button:hover {
+    background: linear-gradient(135deg, #40DDFF 0%, #14BAE3 19.24%, #13B1E6 68.64%, #11AADF 81.77%, #0B98C5 100%);
 }
 
 .button--close {
@@ -64,4 +134,17 @@ fieldset {
 .dialog {
     min-width: 15rem;
     min-height: 5rem;
+}
+
+.register-button {
+    font-size: 15px !important;
+    display: flex;
+    justify-content: flex-end;
+    color: rgba(83, 185, 234, 1) !important;
+    margin-right: 15px;
+}
+
+a.register-button{
+    color: rgba(83, 185, 234, 1) !important;
+    box-shadow: #40DDFF;
 }

@@ -14,12 +14,6 @@
     width: 50%;
 }
 
-.flightlog_title {
-    color: rgba(83, 185, 234, 1);
-    letter-spacing: 4px;
-    font-weight: 600;
-}
-
 .flightlog-card { 
     height: 65vh;
     width: 80%;
@@ -33,7 +27,7 @@
 }
 
 .card-title { 
-    font-size: 30px;
+    font-size: 28px;
 }
 
 .log-date { 
@@ -119,19 +113,23 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+    margin-right: 18rem;
 }
 
 .radio {
     color: white;
+    margin-right: 1rem;
 }
 
-.details_card { 
-    min-width: 50rem;
-    height: 62rem;
-    margin-top: 150px;
-    margin-right: 290px;
-    background: linear-gradient(177.23deg, #2CDBF3 -13.49%, #3A49F9 109.75%);
-    border-radius: 14px;
+.radio-label {
+    margin-right: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+
+.form-label.radio-form-label {
+    width: 16rem;
 }
 
 .form_title { 
@@ -143,28 +141,30 @@
     letter-spacing: 10px;
 }
 
+.inbetween-button .form-group > div {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.inbetween-button .form-group {
+    align-items: unset;
+}
+
 .form-group { 
-    width: 40rem;
+    width: 46rem;
     align-items: center;
     display: flex;
-    justify-content: center;
+    color: white;
 }
 
 .between_button {
+    margin-left: 33% !important;
+    display: flex;
+    justify-content: center;
     background: linear-gradient(135deg, #40DDFF 0%, #14BAE3 19.24%, #13B1E6 68.64%, #11AADF 81.77%, #0B98C5 100%) !important;
-    width: 12.5rem !important;
+    width: 13rem !important;
     color: white !important;
     font-weight: 800 !important;
-}
-
-.radio-1 {
-    margin-right: 10px;
-    margin-left: 20px;
-}
-
-.radio-2 { 
-    margin-right: 10px;
-    margin-left: 80px;
 }
 
 .saveFlightButton { 
@@ -191,7 +191,10 @@
     display: flex;
     flex-direction: row;
     color: white;
-    width: 18rem;
+    width: 23rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 0;
 }
 
 .divider { 
@@ -202,15 +205,50 @@
 }
 
 .flightDetails-card {
-    height: 100vh;
-    display: flex;
-    justify-content: space-evenly;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-left: 25rem;
-    margin-bottom: 150px;
     opacity: .8;
     color: white;
+    padding-left: 3%;
+}
+
+.flightDetails-card h5 {
+    padding-top: 7rem;
+    color: rgba(83, 185, 234, 1);
+    letter-spacing: 4px;
+    font-weight: 600;
+}
+
+.flightDetails-card .card-title {
+
+}
+
+.flightDetails-card .details_card { 
+    display: flex;
+    flex-direction: column;
+    min-width: 50rem;
+    height: 62rem;
+    max-width: 75%;
+    background: linear-gradient(177.23deg, #2CDBF3 -13.49%, #3A49F9 109.75%);
+    border-radius: 14px;
+}
+
+.flightDetails-card .details_card .card-body {
+    display: flex;
+    padding: 4rem;
+}
+
+.flightDetails-card .details_card .card-body .column {
+    width: 50%;
+}
+
+.flightDetails-card .details_card .card-body .form-section-heading {
+    width: 70%;
+}
+
+.flightDetails-card .details_card p {
+    text-transform: uppercase;
+    letter-spacing: 3px;
 }
 
 p { 
@@ -265,4 +303,44 @@ p {
 
 .in-between-airport { 
     color: white;
+}
+
+.inbetween-button .form-group {
+    margin-bottom: 2em;
+}
+
+.modal-content {
+    background: radial-gradient(123.22% 129.67% at 100.89% -5.6%, #3C5E91 16.67%, #17153A 63.02%) !important;
+    color: white;
+    border-radius: 24px;
+    margin-top: 20rem !important;
+}
+
+.modal-header {
+    border: none !important;
+}
+.modal-footer {
+    border: none !important;
+}
+
+.modal-close {
+    color: rgba(83, 185, 234, 1) !important;
+}
+
+.modal-save {
+    background: linear-gradient(135deg, #40DDFF 0%, #14BAE3 19.24%, #13B1E6 68.64%, #11AADF 81.77%, #0B98C5 100%) !important;
+    color: white !important;
+}
+
+div.form-section-heading {
+    border-bottom: 1px solid white;
+    margin: 2.5rem 0 1rem;
+    width: 51rem;
+}
+
+.form-section-heading .section-heading {
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 4px;
+    letter-spacing: 3px;
 }

@@ -3,7 +3,7 @@
         position: fixed;
         left: 0;
         height: 100%;
-        width: 20em;
+        width: 23em;
         padding: 4em 3em;
         flex-direction: column;
         display: flex;
@@ -42,12 +42,20 @@
 
     .navbar-light .navbar-nav .nav-link { 
         color:rgb(142, 142, 142);
+        font-size: 18px;
+        letter-spacing: 2.5px;
         text-decoration: none;
         padding: 2rem;
+        transition: all .2s ease-in-out;
+    }
+    .navbar-light .navbar-nav .nav-link:hover { 
+        color: rgba(83, 185, 234, 1);
+        transform: scale(1.1);
     }
 
+    .navbar-light .navbar-nav .navbar-link:active,
     .navbar-light .navbar-nav .navbar-link:focus { 
-        color:rgba(83, 185, 234, 1)
+        color:rgba(83, 185, 234, 1) !important;
     }
 }
 
@@ -56,6 +64,17 @@
 }
 
 
+.navbar-brand { 
+    display: flex; 
+    flex-direction: row;
+    font-size: 25px;
+    transition: all .2s ease-in-out;
+    letter-spacing: 4px;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.1);
+}
 
 .navbarColumn {
     display: block;
@@ -67,7 +86,7 @@
     height: 100%;
     box-shadow: 0px 1.5px 8px 0px rgba(163, 163,163,1);
 }
-.navbar__item {
+/* .navbar__item {
     flex-basis: 25%;
     flex-direction: column;
     display: flex;
@@ -79,6 +98,10 @@
     font-size: 20px;
     letter-spacing: 2px;
     text-decoration: none;
+} */
+
+.navbar-item:hover { 
+    color:rgba(83, 185, 234, 1) !important;
 }
 
 .navbarTitle { 
@@ -96,7 +119,7 @@
 }
 
 .logText { 
-    color:rgba(151, 151, 151, 1)
+    color:rgb(187, 183, 183)
 }
 
 .navbar__link { 
@@ -109,8 +132,8 @@
     text-decoration: none;
 }
 
-.navbar__link:hover { 
-    color:rgba(255, 255, 255, 0.65)
+.navbar__link:focus { 
+    color:rgba(83, 185, 234, 1) !important;
 }
 /*
 .navbar__link:focus { 

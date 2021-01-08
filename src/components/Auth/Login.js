@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useRef } from "react"
 import { Link, useHistory } from "react-router-dom"
 import {ProfileContext} from "./ProfileProvider"
+import Button from '@material-ui/core/Button';
 import "./Auth.css"
 
 
@@ -47,28 +48,27 @@ export const Login = () => {
                 <div>Email or password was not valid.</div>
                 <button className="button--close" onClick={e => invalidDialog.current.close()}>Close</button>
             </dialog>
-            <section>
+            <section className="form-background">
                 <form className="form--login" onSubmit={handleLogin}>
-                    <h1>Pilot Log</h1>
-                    <h2>Please sign in</h2>
-                    <fieldset>
-                        <label htmlFor="inputEmail"> Email address </label>
-                        <input ref={email} type="email" id="email" className="form-control" defaultValue="me@me.com" placeholder="Email address" required autoFocus />
+                    <fieldset className="email-fieldset">
+                        <label htmlFor="inputEmail"> Email </label>
+                        <input ref={email} type="email" id="email" className="login-input" defaultValue="me@me.com" placeholder="Email address" required autoFocus />
                     </fieldset>
-                    <fieldset>
+                    <fieldset className="email-fieldset">
                         <label htmlFor="inputPassword"> Password </label>
-                        <input ref={password} type="password" id="password" className="form-control" defaultValue="me" placeholder="Password" required />
+                        <input ref={password} type="password" id="password" className="login-input" defaultValue="me" placeholder="Password" required />
                     </fieldset>
-                    <fieldset style={{
-                        textAlign:"center"
-                    }}>
-                        <button className="btn btn-1 btn-sep icon-send" type="submit">Sign In</button>
+                    <fieldset className="button-fieldset">
+                        <Button className="login-button" type="submit">Login</Button>
                     </fieldset>
+                    <div className="register-button">
+                        <Link className="register-button" to="/register">New Here? Register</Link>
+                    </div>
                 </form>
             </section>
-            <section className="link--register">
+            {/* <section className="link--register">
                 <Link to="/register">Not a member yet?</Link>
-            </section>
+            </section> */}
         </main>
     )
 }

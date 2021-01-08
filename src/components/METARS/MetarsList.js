@@ -48,8 +48,9 @@ export const MetarList = (props) => {
                 <section className="metar_container">
                     <div className="metars_card" style={{width: "20rem"}}>
                         <div className="card-body">
-                                <h5 className="card-title">{
-                                    formatType == "speech" ? metars[query].speech : metars[query].raw}</h5>
+                            <h2 className="metar-title">Meteorological Terminal Air Report</h2>
+                            <div className="card-title-metarInfo">{
+                                formatType == "speech" ? metars[query].speech : metars[query].raw}</div>
                         </div>
                     </div>
                 </section>
