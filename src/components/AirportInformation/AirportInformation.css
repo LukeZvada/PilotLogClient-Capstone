@@ -80,46 +80,50 @@ div#root {
     font-size: 24px;
     margin-bottom: 30px;
     width: 70rem;
+    letter-spacing: 2px;
+    font-weight: 350;
 }
 
 .airport_location {
     display: flex;
+    margin-right: 4rem;
     margin-bottom: 10px;
     margin-left: 20px;
     font-size: 20px;
-
+    font-weight: 200;
 }
 
 .airport_icao {
     margin-bottom: 10px;
     margin-left: 20px;
     font-size: 20px;
-
+    font-weight: 200;
 }
 .airport_location {
     margin-bottom: 10px;
     margin-left: 20px;
     font-size: 20px;
-
+    font-weight: 200;
 }
 .airport_elevation {
     margin-bottom: 10px;
     margin-left: 20px;
     font-size: 20px;
-
+    font-weight: 200;
 }
 .airport_type {
     margin-bottom: 10px;
     margin-left: 20px;
     font-size: 20px;
-
+    font-weight: 200;
 }
 .airport_moreInfo {
     margin-bottom: 10px;
     margin-left: 20px;
     font-size: 20px;
+    font-weight: 200;
 }
 
-/* span {
-    width: 13rem;
-} */
+span {
+    margin-right: 1rem;
+}
