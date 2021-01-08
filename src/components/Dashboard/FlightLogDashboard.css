@@ -223,6 +223,15 @@
 
 .flightDetails-card .details_card .card-body {
     display: flex;
+    padding: 4rem;
+}
+
+.flightDetails-card .details_card .card-body .column {
+    width: 50%;
+}
+
+.flightDetails-card .details_card .card-body .form-section-heading {
+    width: 70%;
 }
 
 .flightDetails-card .details_card p {
