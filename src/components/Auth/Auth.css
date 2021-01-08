@@ -75,7 +75,7 @@ input.login-input {
     display: flex;
     justify-content: space-evenly;
     margin-left: 70rem;
-    background-color: rgba(111, 108, 153, 0.521);
+    background-color: rgba(111, 108, 153, 0.7);
     margin-right: 65rem;
     margin-top: 20rem;
     width: 450px;
