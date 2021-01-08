@@ -17,6 +17,7 @@ div#root {
     border-radius: 14px;
     color: white;
     font-size: 28px;
+    margin-left: 30rem;
 }
 
 .metar_container { 
@@ -44,4 +45,18 @@ div#root {
     align-items: center;
     display: flex;
     justify-content: center;
+}
+
+.metar-title {
+    display: flex;
+    justify-content: center;
+    margin-top: -2rem;
+    margin-bottom: 3rem;
+    letter-spacing: 2px;
+    font-weight: 350;
+}
+
+.card-title-metarInfo {
+    font-size: 25px;
+    font-weight: 200;
 }

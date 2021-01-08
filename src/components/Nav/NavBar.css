@@ -46,12 +46,15 @@
         letter-spacing: 2.5px;
         text-decoration: none;
         padding: 2rem;
+        transition: all .2s ease-in-out;
     }
     .navbar-light .navbar-nav .nav-link:hover { 
         color: rgba(83, 185, 234, 1);
+        transform: scale(1.1);
     }
 
-    .navbar-light .navbar-nav .navbar-link:active { 
+    .navbar-light .navbar-nav .navbar-link:active,
+    .navbar-light .navbar-nav .navbar-link:focus { 
         color:rgba(83, 185, 234, 1) !important;
     }
 }
