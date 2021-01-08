@@ -141,6 +141,15 @@
     letter-spacing: 10px;
 }
 
+.inbetween-button .form-group > div {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.inbetween-button .form-group {
+    align-items: unset;
+}
+
 .form-group { 
     width: 46rem;
     align-items: center;
@@ -149,6 +158,7 @@
 }
 
 .between_button {
+    margin-left: 33% !important;
     display: flex;
     justify-content: center;
     background: linear-gradient(135deg, #40DDFF 0%, #14BAE3 19.24%, #13B1E6 68.64%, #11AADF 81.77%, #0B98C5 100%) !important;
@@ -293,16 +303,10 @@ p {
 
 .in-between-airport { 
     color: white;
-    margin-left: 7rem;
 }
 
-.inbetween { 
-    color: white;
-    margin-left: -12rem;
-}
-
-.inbetween-button:before {
-    margin-left: 13.5rem;
+.inbetween-button .form-group {
+    margin-bottom: 2em;
 }
 
 .modal-content {

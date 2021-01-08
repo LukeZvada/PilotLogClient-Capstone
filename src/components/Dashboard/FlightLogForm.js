@@ -175,23 +175,24 @@ export const FlightForm = (props) => {
                     />
                 </div>
             </fieldset>
-            <section className="inbetween-button" key={flight.id}>
-                {
-                    inBetweens.length >= 1 ? 
-                        <div className="form-group">
-                            <label className="form-label inbetween" htmlFor="in_betweens">InBetween: </label>
-                            <div>
-                                {
-                                    inBetweens.map(airport => {
-                                        return <section key={airport}>
-                                            <div className="in-between-airport">{airport}</div>
-                                        </section>
-                                    })
-                                }
+            <fieldset className="inbetween-button" key={flight.id}>
+                <div className="form-group">
+                    {
+                        inBetweens.length >= 1 ? 
+                            <div className="form-group">
+                                <label className="form-label" htmlFor="in_betweens">InBetween: </label>
+                                <div className="in-between-airport">
+                                    {
+                                        inBetweens.map(airport => {
+                                            return <p>{airport}</p>
+                                        })
+                                    }
+                                </div>
+                                <br/>
                             </div>
-                        </div>
-                    : null
-                }
+                        : null
+                    }
+                </div>
                 <Button className="between_button" variant="secondary" onClick={handleShow}>
                     Add InBetween Stop
                 </Button>
@@ -213,7 +214,7 @@ export const FlightForm = (props) => {
                     </Button>
                     </Modal.Footer>
                 </Modal>
-            </section>
+            </fieldset>
             <fieldset>
                 <div className="form-group">
                     <label className="form-label" htmlFor="to">To:</label>
