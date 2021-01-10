@@ -2,7 +2,7 @@
 
 For my full stack capstone at Nashville Software School, I created an application that allows pilots to easily log flights, get real time METARS (weather), and current airport conditions in real time. I used React, Javascript, CSS, HTML, Material-UI, Python, Django, Chart.js, AVWX api (METARS & Airport Conditions)
 
-<img src="Cover.png" >
+<img src="pilotLogDesign2.png" >
 
 ### Setup
 1. Clone this Repository
